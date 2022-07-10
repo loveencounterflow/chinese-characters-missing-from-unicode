@@ -71,7 +71,6 @@ more cursive forms are also attested)
 > and rendered dynamically. [...]
 > 意為博物館—[*zi.tools*](https://zi.tools/zi/%E2%BF%B1%E5%AE%80%E5%8D%9A?secondary=ids&seq=%E2%BF%B1%E5%AE%80%E5%8D%9A)
 
-[*圕 - iFuun*](http://www.ifuun.com/a2019063019876941/)
 
 > 圖書館又稱圖書舘，在中國大陸舘被當做館的異體字,已極少使用。
 >
@@ -86,6 +85,8 @@ more cursive forms are also attested)
 
 ![*图书馆博物馆文物*](./图书馆博物馆文物-641.jpeg)
 
-
+* [*圕 - iFuun*](http://www.ifuun.com/a2019063019876941/)
+* http://www.ifuun.com/a2019063019876941/'
+* http://i1.wp.com/inews.gtimg.com/newsapp_bt/0/9524998867/641
 
 
