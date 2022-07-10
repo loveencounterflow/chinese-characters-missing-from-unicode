@@ -11,13 +11,33 @@
   - [𠏹](#%F0%A0%8F%B9)
   - [Variant of 錢](#variant-of-%E9%8C%A2)
   - [⿱宀博 for 博物館](#%E2%BF%B1%E5%AE%80%E5%8D%9A-for-%E5%8D%9A%E7%89%A9%E9%A4%A8)
+  - [⿺麥方: pang, bang; 'bread'](#%E2%BF%BA%E9%BA%A5%E6%96%B9-pang-bang-bread)
+  - [⿰米団: Riceball](#%E2%BF%B0%E7%B1%B3%E5%9B%A3-riceball)
+  - [菩薩](#%E8%8F%A9%E8%96%A9)
+  - [⿱䒑多](#%E2%BF%B1%E4%92%91%E5%A4%9A)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 
-<!-- # **NO LONGER USED; MIGRATED TO MINGKWAI-TYPESETTER-TEXTS/ISSUES ### -->
+<!--
 
+/home/flow/io/mingkwai-rack/texts/000-project-issues/main.md
+jizura-datasources/data/materials-tbd/babelstone-cjk-characters-not-in-unicode
+
+
+
+## Missing Unicode Glyphs
+
+Towards the end of `variantuage.txt` there are three lone entries 䥑
+鎶
+&jzr#xe35a;
+for glyphs whose simplified counterparts are missing.
+
+Also see jizura-datasources/data/materials-tbd/babelstone-cjk-characters-not-in-unicode
+
+
+-->
 
 # Chinese Characters Missing from Unicode
 
@@ -83,10 +103,66 @@ more cursive forms are also attested)
 > 藏經閣：在古代中國，圖書館多與佛教有關，不過當時並不叫圖書館，而是叫藏經閣。—[*圖書館*](https://zh.wikipedia.org/zh-tw/图书馆)
 
 
-![*图书馆博物馆文物*](./图书馆博物馆文物-641.jpeg)
+![*图书馆博物馆文物*](./resources/图书馆博物馆文物-641.jpeg)
 
 * [*圕 - iFuun*](http://www.ifuun.com/a2019063019876941/)
 * http://www.ifuun.com/a2019063019876941/
 * http://i1.wp.com/inews.gtimg.com/newsapp_bt/0/9524998867/641
 
 
+
+## ⿺麥方: pang, bang; 'bread'
+
+http://languagelog.ldc.upenn.edu/nll/?p=40985
+
+⿺麥方: pang, bang; 'bread'
+
+http://languagelog.ldc.upenn.edu/nll/?p=27725
+
+> Founded in 1858, Keio is the oldest university in Japan and one of the best, also ranking high in world
+> ratings.  Its name is written 慶應 in kanji.  That's a lot of strokes to scribble down every time you want
+> to write the name of your university, so Keio people often write it this way:   广+K 广+O (imagine that the
+> "K" and the "O" are written inside of the 广).  That makes 6 strokes and 4 strokes instead of 15 strokes
+> and 17 strokes respectively, 10 strokes total instead of 32.
+
+
+> In these character constructions, "K" and "O" are functioning as phonophores, and Kangxi radical 53 广
+> ("dotted cliff" or "house on cliff") is functioning as the semantophore.
+
+## ⿰米団: Riceball
+
+⿰米団
+
+![http://www.7-11.com.tw/2week/111228/app_111228-3.png](./resources/app_111228-3.png)
+
+http://chinese.stackexchange.com/questions/20827/is-this-a-rare-variant-character-or-not-really-a-chinese-character
+
+> This character is on the label of a riceball sold at 7-11 in Taipei. I believe this kind of riceball is
+> originally Japanese.
+>
+> It seems to be some kind of variant of 糰 / 团 but is actually composed of 米 on the left plus 団 on the
+> right. But I can't find it anywhere on the Internet or in Unicode so far.
+>
+> Is it a known variant, or is it possibly normally considered a Japanese character? On Wiktionary, 団 is
+> listed only as a Japanese shinjitai character. (Shinjitai is a simplified character made in Japan.)
+>
+> Or maybe it's some kind of fake character made up by 7-11, like a trademark?
+
+
+## 菩薩
+
+
+https://en.wikipedia.org/wiki/Chinese_characters#Polysyllabic_characters: "in medieval manuscripts 菩薩 púsà
+"bodhisattva" (simplified: 菩萨) is sometimes written with a single character formed of a 2×2 grid of four 十
+(derived from the grass radical over two 十)."
+
+報:⿰幸𠬝, ?:⿰𦍒𠬝 as attested in https://upload.wikimedia.org/wikipedia/commons/3/39/申报创刊号.jpg
+
+![申报创刊号](./resources/shenbaochuangkanhao.jpg)
+
+## ⿱䒑多
+
+《中國書法大字典》香港：中外出版社, 1976年 p1191 芻字:
+芻 var. ⿱䒑多
+芻 var. (⿱卄&jzr#xe139;十&jzr#xe139;十)
+芻 var. (⿱卄龴&jzr#xe139;十)
