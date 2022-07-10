@@ -1,28 +1,36 @@
+
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [**NO LONGER USED; MIGRATED TO MINGKWAI-TYPESETTER-TEXTS/ISSUES](#no-longer-used-migrated-to-mingkwai-typesetter-textsissues)
+- [Chinese Characters Missing from Unicode](#chinese-characters-missing-from-unicode)
+  - [⿱成龍 and ⿱成龙](#%E2%BF%B1%E6%88%90%E9%BE%8D-and-%E2%BF%B1%E6%88%90%E9%BE%99)
+  - [简体字 von 嗧 (jialun) fehlt](#%E7%AE%80%E4%BD%93%E5%AD%97-von-%E5%97%A7-jialun-fehlt)
+  - [𠏹](#%F0%A0%8F%B9)
+  - [Variant of 錢](#variant-of-%E9%8C%A2)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-**migrated to `jzr/chinese-characters-missing-from-unicode`**
 
-# **NO LONGER USED; MIGRATED TO MINGKWAI-TYPESETTER-TEXTS/ISSUES ###
+<!-- # **NO LONGER USED; MIGRATED TO MINGKWAI-TYPESETTER-TEXTS/ISSUES ### -->
 
+
+# Chinese Characters Missing from Unicode
+
+
+## ⿱成龍 and ⿱成龙
 
 ⿱成龍 and ⿱成龙 (py duang1) as of http://languagelog.ldc.upenn.edu/nll/?p=17913#comment-1491798
 
 
 
-######################
 
+## 简体字 von 嗧 (jialun) fehlt
 
-简体字 von 嗧 (jialun) fehlt
-
-
-######################
+## 𠏹
 
 similar chr:
 &#x203f9;	𠏹	<3212522125112141>
@@ -48,8 +56,7 @@ Year: 2001
 Publisher: Ganesha Publishing
 Place of publication: Bristol
 
-######################
-
+## Variant of 錢
 
 Variant of 錢 shown in Mathew's; strokeorder presumably <324>, ⿰亻丶 (other,
 more cursive forms are also attested)
