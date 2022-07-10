@@ -1,21 +1,21 @@
 
+# Chinese Characters Missing from Unicode
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Chinese Characters Missing from Unicode](#chinese-characters-missing-from-unicode)
-  - [⿱成龍 and ⿱成龙](#%E2%BF%B1%E6%88%90%E9%BE%8D-and-%E2%BF%B1%E6%88%90%E9%BE%99)
-  - [简体字 von 嗧 (jialun) fehlt](#%E7%AE%80%E4%BD%93%E5%AD%97-von-%E5%97%A7-jialun-fehlt)
-  - [𠏹](#%F0%A0%8F%B9)
-  - [Variant of 錢](#variant-of-%E9%8C%A2)
-  - [⿱宀博 for 博物館](#%E2%BF%B1%E5%AE%80%E5%8D%9A-for-%E5%8D%9A%E7%89%A9%E9%A4%A8)
-  - [⿺麥方: pang, bang; 'bread'](#%E2%BF%BA%E9%BA%A5%E6%96%B9-pang-bang-bread)
-  - [⿰米団: Riceball](#%E2%BF%B0%E7%B1%B3%E5%9B%A3-riceball)
-  - [菩薩](#%E8%8F%A9%E8%96%A9)
-  - [⿰𦍒𠬝: Variant of 報](#%E2%BF%B0%F0%A6%8D%92%F0%A0%AC%9D-variant-of-%E5%A0%B1)
-  - [⿱䒑多](#%E2%BF%B1%E4%92%91%E5%A4%9A)
+- [⿱成龍 and ⿱成龙](#%E2%BF%B1%E6%88%90%E9%BE%8D-and-%E2%BF%B1%E6%88%90%E9%BE%99)
+- [简体字 von 嗧 (jialun) fehlt](#%E7%AE%80%E4%BD%93%E5%AD%97-von-%E5%97%A7-jialun-fehlt)
+- [𠏹](#%F0%A0%8F%B9)
+- [Variant of 錢](#variant-of-%E9%8C%A2)
+- [⿱宀博 for 博物館](#%E2%BF%B1%E5%AE%80%E5%8D%9A-for-%E5%8D%9A%E7%89%A9%E9%A4%A8)
+- [⿺麥方: pang, bang; 'bread'](#%E2%BF%BA%E9%BA%A5%E6%96%B9-pang-bang-bread)
+- [⿰米団: Riceball](#%E2%BF%B0%E7%B1%B3%E5%9B%A3-riceball)
+- [菩薩](#%E8%8F%A9%E8%96%A9)
+- [⿰𦍒𠬝: Variant of 報](#%E2%BF%B0%F0%A6%8D%92%F0%A0%AC%9D-variant-of-%E5%A0%B1)
+- [⿱䒑多](#%E2%BF%B1%E4%92%91%E5%A4%9A)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -37,10 +37,8 @@ for glyphs whose simplified counterparts are missing.
 
 Also see jizura-datasources/data/materials-tbd/babelstone-cjk-characters-not-in-unicode
 
-
 -->
 
-# Chinese Characters Missing from Unicode
 
 
 ## ⿱成龍 and ⿱成龙
