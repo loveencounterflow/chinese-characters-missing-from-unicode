@@ -10,6 +10,7 @@
   - [简体字 von 嗧 (jialun) fehlt](#%E7%AE%80%E4%BD%93%E5%AD%97-von-%E5%97%A7-jialun-fehlt)
   - [𠏹](#%F0%A0%8F%B9)
   - [Variant of 錢](#variant-of-%E9%8C%A2)
+  - [⿱宀博 for 博物館](#%E2%BF%B1%E5%AE%80%E5%8D%9A-for-%E5%8D%9A%E7%89%A9%E9%A4%A8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -62,7 +63,7 @@ Variant of 錢 shown in Mathew's; strokeorder presumably <324>, ⿰亻丶 (other
 more cursive forms are also attested)
 
 
-######################
+## ⿱宀博 for 博物館
 
 ⿱宀博
 
