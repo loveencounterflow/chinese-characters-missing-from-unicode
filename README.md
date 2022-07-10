@@ -14,6 +14,7 @@
   - [⿺麥方: pang, bang; 'bread'](#%E2%BF%BA%E9%BA%A5%E6%96%B9-pang-bang-bread)
   - [⿰米団: Riceball](#%E2%BF%B0%E7%B1%B3%E5%9B%A3-riceball)
   - [菩薩](#%E8%8F%A9%E8%96%A9)
+  - [⿰𦍒𠬝: Variant of 報](#%E2%BF%B0%F0%A6%8D%92%F0%A0%AC%9D-variant-of-%E5%A0%B1)
   - [⿱䒑多](#%E2%BF%B1%E4%92%91%E5%A4%9A)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -155,6 +156,8 @@ http://chinese.stackexchange.com/questions/20827/is-this-a-rare-variant-characte
 https://en.wikipedia.org/wiki/Chinese_characters#Polysyllabic_characters: "in medieval manuscripts 菩薩 púsà
 "bodhisattva" (simplified: 菩萨) is sometimes written with a single character formed of a 2×2 grid of four 十
 (derived from the grass radical over two 十)."
+
+## ⿰𦍒𠬝: Variant of 報
 
 報:⿰幸𠬝, ?:⿰𦍒𠬝 as attested in https://upload.wikimedia.org/wikipedia/commons/3/39/申报创刊号.jpg
 
