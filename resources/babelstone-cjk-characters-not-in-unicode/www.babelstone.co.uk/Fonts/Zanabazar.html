@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Zanabazar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:56:02 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://www.babelstone.co.uk/BabelStone.css" />
+<title>BabelStone Fonts : BabelStone Zanabazar</title>
+</head>
+<body>
+<h1>BabelStone Fonts</h1>
+<hr/>
+<h2>BabelStone Zanabazar</h2>
+
+<a name="Description"></a>
+<h3>Description</h3>
+<p><b>BabelStone Zanabazar</b> is a Unicode font for the <a href="http://www.unicode.org/versions/Unicode10.0.0/ch14.pdf#G41935" title="&quot;The Unicode Standard&quot; version 10.0.0 ch. 14">Zanabazar Square script</a>, which was encoded in Unicode version 10.0 (June 2017). The Zanabazar Square script, known in Mongolian as <i>Хэвтээ Дөрвөлжин бичиг</i> or <i>Хэвтээ Дөрвөлжин Үсэг</i> ("horizontal square script"), was devised by <a href="https://en.wikipedia.org/wiki/Zanabazar" title="Wikipedia : Zanabazar">Zanabazar</a> (1635–1723) for use in writing Mongolian, Tibetan and Sanskrit. It was rarely used outside of descriptions of the script and in calligraphy manuals.</p>
+<br/>
+
+<p class="centre"><img src="http://www.babelstone.co.uk/Zanabazar/Images/L2_15_337_Fig_1B.jpg" title="" alt="" /></p>
+<p class="centre"><img src="http://www.babelstone.co.uk/Zanabazar/Images/L2_15_337_Fig_1C.jpg" title="" alt="" /></p>
+<p class="centre">Block print of Zanabazar's square script, from his collected works edited by the Khalkha Zaya Pandita Luvsanprinlei (1642–1715) (from <a href="http://www.unicode.org/L2/L2015/15337-zanabazar-square.pdf" title="L2/15-337: Proposal to Encode the Zanabazar Square Script">L2/15-337</a> Fig. 1)</p>
+<br/>
+<hr/>
+
+<a name="Rendering"></a>
+<h3>Rendering</h3>
+<p>The BabelStone Zanabazar font supports complex shaping behaviour using OpenType features, but whether these features are applied or not depends on the operating system and the text rendering engine.  Windows 10 uses the <a href="https://www.microsoft.com/typography/OpenTypeDev/USE/intro.htm" title="Creating and supporting OpenType fonts for the Universal Shaping Engine">Universal Shaping Engine</a>, which does not currently support Zanabazar Square.</p>
+
+<p>As of February 2018, Zanabazar Square text displayed with BabelStone Zanabazar font does not show any complex shaping behaviour in Microsoft applications (or other applications that rely on Microsoft rendering) under Windows 10. Zanabazar Square does not currently render correctly in the latest version of Mozilla Firefox.  However, Zanabazar Square is supported by the latest version of <a href="https://www.freedesktop.org/wiki/Software/HarfBuzz/">HarfBuzz</a>, which is used in the latest version of Google Chrome, although there are some rendering issues as reported <a href="https://github.com/harfbuzz/harfbuzz/issues/617" title="HarfBuzz Issue #617: Some Zanabazar Square sequences do not render as expected">here</a>.</p>
+
+<p>In order to test BabelStone Zanabazar under HarfBuzz on Windows, please follow these steps:</p>
+
+<ol>
+<li>Download and unzip <a href="https://www.freedesktop.org/software/harfbuzz/release/" title="https://www.freedesktop.org/software/harfbuzz/release/">harfbuzz-1.7.4-win32.zip</a> (or latest version).</li>
+<li>Copy BabelStoneZanabazar.ttf and <a href="Test/ZanabazarTest.txt" title="Simple Zanabazar test file">ZanabazarTest.txt</a> (transcription of the five lines of Zanabazar Square text in <a href="http://www.unicode.org/L2/L2015/15337-zanabazar-square.pdf" title="L2/15-337: Proposal to Encode the Zanabazar Square Script">L2/15-337</a> Fig. 2) to the directory containing the downloaded HarfBuzz files.</li>
+<li>Open a command prompt in the directory containing the downloaded HarBuzz files.</li>
+<li>Enter the following command: <span class="mono">type ZanabazarTest.txt | hb-view.exe BabelStoneZanabazar.ttf  --output-format=png --output-file=ZanabazarTest.png --font-size=36</span></li>
+<li>The file ZanabazarTest.png should be created in the directory, and should look like <a href="Test/ZanabazarTest.png" title="ZanabazarTest.png">this</a>.</li>
+</ol>
+<br/>
+<hr/>
+
+<a name="Issues"></a>
+<h3>Issues</h3>
+<h4>A. Order of Vowel Signs</h4>
+<p>A single vowel cluster may take one or two vowel signs and a vowel length mark, but as Zanabazar Square vowel signs and the vowel length mark (U+11A0A) all have a Canonical Combining Class of zero, they do not reorder under normalization, and so there is no canonical order for vowel signs and vowel length. Moreover, the Unicode Standard does not clearly specify the correct ordering of vowel signs and the vowel length mark, so users may not know what the correct order is, and multiple different sequences may give the same visual result. Under HarfBuzz some sequences render correctly but other sequences of the same vowel signs and length mark may not render correctly (see <a href="https://www.freedesktop.org/wiki/Software/HarfBuzz/">HarfBuzz</a>, although there are some rendering issues as reported <a href="https://github.com/harfbuzz/harfbuzz/issues/617" title="HarfBuzz Issue #617: Some Zanabazar Square sequences do not render as expected">HarfBuzz Issue 617</a> for details).</p>
+
+<p>The order of the vowel length mark is particularly problematic from my perspective. Anshuman Pandey, author the Zanabazar Square encoding proposal suggests that the length mark should be placed after a vowel sign (if present) in most cases, but in some cases he suggests it should be placed between two vowel signs (see <a href="http://www.unicode.org/L2/L2015/15337-zanabazar-square.pdf" title="L2/15-337: Proposal to Encode the Zanabazar Square Script">L2/15-337</a> p. 6). Firstly, as the length mark ligates with the preceding consonant, it is much easier from the font designer's point of view to deal with the ligature if the length mark directly follows the consonant it ligates with. It adds considerable time and effort to the font design to define OpenType substitutions that can deal with all potential orderings of the length mark with respect to vowel signs. Secondly, as the vowel length mark corresponds directly to the <i>a-chung</i> mark in the Tibetan script (U+0F71), which follows directly after the last consonant in the stack and before any vowel signs, it is natural for users familiar with the Tibetan script to enter the Zanabazar vowel length mark after the last consonant in the stack and before any vowel signs.</p>
+
+<p>The following are some of the test cases for my BabelStone Zanabazar font that have sequences that are supported in my font but which do not render correctly with HarfBuzz (tested with version 1.7.4 using <a href="Test/test.html">this batch file</a>).</p>
+<br/>
+
+<table border="1" width="100%">
+<thead>
+<tr>
+<th>Test Case</th>
+<td>Description</td>
+<td>Test File</td>
+<td>Test Output</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Test Case A</th>
+<td>Single vowel sign and length mark</td>
+<td><a href="Test/Zanabazar_Test_A.txt">Zanabazar_Test_A.txt</a></td>
+<td><a href="Test/Zanabazar_Test_A.png">Zanabazar_Test_A.png</a></td>
+</tr>
+<tr>
+<th>Test Case B</th>
+<td>Double vowel signs</td>
+<td><a href="Test/Zanabazar_Test_B.txt">Zanabazar_Test_B.txt</a></td>
+<td><a href="Test/Zanabazar_Test_B.png">Zanabazar_Test_B.png</a></td>
+</tr>
+<tr>
+<th>Test Case C</th>
+<td>Double vowel signs and length mark</td>
+<td><a href="Test/Zanabazar_Test_C.txt">Zanabazar_Test_C.txt</a></td>
+<td><a href="Test/Zanabazar_Test_C.png">Zanabazar_Test_C.png</a></td>
+</tr>
+<tr>
+<th>Test Case D</th>
+<td>Single subjoined consonant</td>
+<td><a href="Test/Zanabazar_Test_D.txt">Zanabazar_Test_D.txt</a></td>
+<td><a href="Test/Zanabazar_Test_D.png">Zanabazar_Test_D.png</a></td>
+</tr>
+<tr>
+<th>Test Case E</th>
+<td>Double subjoined consonants</td>
+<td><a href="Test/Zanabazar_Test_E.txt">Zanabazar_Test_E.txt</a></td>
+<td><a href="Test/Zanabazar_Test_E.png">Zanabazar_Test_E.png</a></td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<h4>B. Head Letters La and Sa</h4>
+<p>The Tibetan script has three head letters that can be superfixed to a consonant (Ra, La and Sa), of which the Ra head takes an abbreviated form in native Tibetan words. The Unicode implementation of the Zanabazar Square script defines a special ligated half-height "Cluster-Initial Letter Ra" (U+11A3A) that corresponds to Tibetan Ra head and which is used in Tibetan stacks, in contrast to the ordinary consonant Ra which is used at the top of Sanskrit stacks. In Tibetan the La and Sa head letters have the same form as La and Sa at the top of Sanskrit stacks, but examples of Zanabazar Square script included in <a href="http://www.unicode.org/L2/L2015/15337-zanabazar-square.pdf" title="L2/15-337: Proposal to Encode the Zanabazar Square Script">L2/15-337</a> show that La and Sa at the top of Tibetan stacks are normally written with ligated half-height forms rather than as the unligated full-height forms that would be expected in Sanskrit stacks.</p>
+
+<p class="centre"><b>Tibetan rka, rsa and rla in Zanabazar Square script</b></p>
+<p class="centre"><img src="http://www.babelstone.co.uk/Zanabazar/Images/L2_15_337_Fig_1C_Ra_Sa_La.jpg" title="" alt="" /></p>
+
+<p>There is currently no way to distinguish the ligated half-height forms and the unligated full-height forms of La and Sa, and so the font designer has to make a decision at to which forms to use. BabelStone Zanabazar uses the ligated half-height forms in all cases as Tibetan use of these head letters is much more common than Sanskrit use in complex stacks. I plan to make a proposal to encode Cluster-Initial Letter La and Cluster-Initial Letter Sa to solve this problem.</p>
+<br/>
+<hr/>
+
+<a name="Samples"></a>
+<h3>Samples</h3>
+<p class="centre"><b>BabelStone Zanabazar</b> (36 points)</p>
+<p class="centre"><img src="Test/ZanabazarTest.png" title="Sample of the BabelStone Zanabazar font at 36 points" alt="" /></p>
+<p class="centre">Transcription of the five lines of <a href="Test/ZanabazarTest.txt" title="Zanabazar test file">Zanabazar Square text</a> in <a href="http://www.unicode.org/L2/L2015/15337-zanabazar-square.pdf" title="L2/15-337: Proposal to Encode the Zanabazar Square Script">L2/15-337</a> Fig. 2</p>
+<p class="centre"><a href="Zanabazar_Test.html" title="Zanabazar test page">As an HTML page</a></p>
+<br/>
+<hr/>
+
+<a name="Repertoire"></a>
+<h3>Character Repertoire</h3>
+<p>The tables below render each character in the BabelStone Zanabazar font (excluding Basic Latin characters), either using the font installed on your local machine or using a <a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format" title="Wikipedia : Web Open Font Format">WOFF font</a> if the font is not installed on your local machine.</p>
+<br/>
+
+<h4>Zanabazar Square [<a href="http://www.unicode.org/charts/PDF/U11A00.pdf" title="Unicode code chart for Zanabazar Square">11A00..11A4F</a>]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+11A00</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER A</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨀</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A01</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN I</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨁</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A02</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN UE</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨂</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A03</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN U</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨃</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A04</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN E</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨄</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A05</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN OE</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨅</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A06</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN O</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨆</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A07</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN AI</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨇</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A08</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN AU</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨈</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A09</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL SIGN REVERSED I</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨉</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0A</td>
+	<td class="sm"><small>ZANABAZAR SQUARE VOWEL LENGTH MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨊</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0B</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER KA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨋</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0C</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER KHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨌</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0D</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER GA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨍</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0E</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER GHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨎</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A0F</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER NGA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨏</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A10</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER CA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨐</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A11</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER CHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨑</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A12</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER JA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨒</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A13</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER NYA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨓</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A14</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER TTA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨔</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A15</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER TTHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨕</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A16</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DDA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨖</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A17</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DDHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨗</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A18</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER NNA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨘</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A19</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER TA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨙</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1A</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER THA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨚</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1B</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨛</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1C</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨜</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1D</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER NA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨝</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1E</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER PA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨞</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A1F</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER PHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨟</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A20</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER BA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨠</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A21</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER BHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨡</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A22</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER MA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨢</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A23</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER TSA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨣</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A24</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER TSHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨤</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A25</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DZA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨥</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A26</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER DZHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨦</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A27</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER ZHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨧</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A28</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER ZA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨨</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A29</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER -A</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨩</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2A</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER YA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨪</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2B</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER RA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨫</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2C</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER LA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨬</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2D</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER VA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨭</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2E</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER SHA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨮</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A2F</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER SSA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨯</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A30</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER SA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨰</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A31</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER HA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨱</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A32</td>
+	<td class="sm"><small>ZANABAZAR SQUARE LETTER KSSA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨲</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A33</td>
+	<td class="sm"><small>ZANABAZAR SQUARE FINAL CONSONANT MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨳</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A34</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN VIRAMA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨴</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A35</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN CANDRABINDU</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨵</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A36</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN CANDRABINDU WITH ORNAMENT</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨶</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A37</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN CANDRA WITH ORNAMENT</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨷</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A38</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN ANUSVARA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨸</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A39</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SIGN VISARGA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨹</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3A</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLUSTER-INITIAL LETTER RA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨺</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3B</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLUSTER-FINAL LETTER YA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨻</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3C</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLUSTER-FINAL LETTER RA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨼</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3D</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLUSTER-FINAL LETTER LA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨽</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3E</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLUSTER-FINAL LETTER VA</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨾</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A3F</td>
+	<td class="sm"><small>ZANABAZAR SQUARE INITIAL HEAD MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑨿</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A40</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLOSING HEAD MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩀</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A41</td>
+	<td class="sm"><small>ZANABAZAR SQUARE MARK TSHEG</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩁</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A42</td>
+	<td class="sm"><small>ZANABAZAR SQUARE MARK SHAD</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩂</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A43</td>
+	<td class="sm"><small>ZANABAZAR SQUARE MARK DOUBLE SHAD</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩃</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A44</td>
+	<td class="sm"><small>ZANABAZAR SQUARE MARK LONG TSHEG</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩄</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A45</td>
+	<td class="sm"><small>ZANABAZAR SQUARE INITIAL DOUBLE-LINED HEAD MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩅</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A46</td>
+	<td class="sm"><small>ZANABAZAR SQUARE CLOSING DOUBLE-LINED HEAD MARK</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩆</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11A47</td>
+	<td class="sm"><small>ZANABAZAR SQUARE SUBJOINER</small></td>
+	<td class="sm"><p class="zanabazar xbig">𑩇</p></td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<h4>Tibetan [<a href="http://www.unicode.org/charts/PDF/U0F00.pdf" title="Unicode code chart for Tibetan">0F00..0FFF</a>]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+0FD5</td>
+	<td class="sm"><small>RIGHT-FACING SVASTI SIGN</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿕</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD6</td>
+	<td class="sm"><small>LEFT-FACING SVASTI SIGN</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿖</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD7</td>
+	<td class="sm"><small>RIGHT-FACING SVASTI SIGN WITH DOTS</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿗</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD8</td>
+	<td class="sm"><small>LEFT-FACING SVASTI SIGN WITH DOTS</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿘</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD9</td>
+	<td class="sm"><small>TIBETAN MARK LEADING MCHAN RTAGS</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿙</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FDA</td>
+	<td class="sm"><small>TIBETAN MARK TRAILING MCHAN RTAGS</small></td>
+	<td class="sm"><p class="zanabazar xbig">࿚</p></td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Features"></a>
+<h3>OpenType Features</h3>
+<p>[<a href="VOLT/BabelStoneZanabazar.html" title="Click here to download the VOLT project file for the latest version of this font">VOLT project file</a>]</p>
+<br/>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Script</th>
+	<th class="sm">Language</th>
+	<th class="sm">Features</th>
+	<th class="sm">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">Zanabazar Square &lt;zanb&gt;</td>
+	<td class="sl">Default &lt;dflt&gt;</td>
+	<td class="sl">Glyph Composition / Decomposition &lt;ccmp&gt;</td>
+	<td class="sl">For all shaping and glyph substitutions</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Versions"></a>
+<h3>Version History</h3>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Font</th>
+	<th class="sm">Version</th>
+	<th class="sm">Date</th>
+	<th class="sm">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">BabelStone Zanabazar</td>
+	<td class="sl">10.000</td>
+	<td class="sl">2018-02-04</td>
+	<td class="sl">Initial release, supporting Unicode 10.0.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Zanabazar</td>
+	<td class="sl">10.001</td>
+	<td class="sl">2018-02-07</td>
+	<td class="sl">Some glyph modifications.</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Download"></a>
+<h3>Download</h3>
+<p>BabelStone Zanabazar is licensed under the <a href="http://scripts.sil.org/OFL" title="SIL Open Font License (OFL)">SIL Open Font License</a> 1.1, which means you are free to use it for personal or commercial purposes, and to redistribute it by itself or as part of a free or commercial software package, just as long as you do not sell the font on its own.  The license also allows you to modify the font in any way you like, as long as the modified font does not use "BabelStone" in its name.  Please read the <a href="BabelStoneOFL.txt" title="OFL License">license</a> for details.</p>
+
+<ul>
+<li><a href="Download/BabelStoneZanabazar.ttf" title="Click here to download">Download BabelStone Zanabazar</a> v. 10.001 (2018-02-07)</li>
+</ul>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Web_Open_Font_Format" title="Web Open Font Format">WOFF</a> format web font version of BabelStone Zanabazar is available <a href="WOFF/BabelStoneZanabazar.woff">here</a>. You are free to download and host the web font on your own web site, but you may not dynamically use the woff font on www.babelstone.co.uk from your web site.</p>
+<br/>
+<hr class="toe" />
+<p class="centre"><a href="index.html">BabelStone Fonts</a></p>
+</body>
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Zanabazar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:57:00 GMT -->
+</html>

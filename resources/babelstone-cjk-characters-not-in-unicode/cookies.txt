@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.city.kasaoka.okayama.jp	TRUE	/	FALSE	1999999999	sto-id-47873	BFPKPOAKFAAA
+

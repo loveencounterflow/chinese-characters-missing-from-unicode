@@ -1,0 +1,36 @@
+HTTrack3.48-21 launched on Tue, 30 Oct 2018 12:48:08 at http://www.babelstone.co.uk/Fonts/PUA.html
+(httrack http://www.babelstone.co.uk/Fonts/PUA.html -O /home/flow/websites/babelstone2 -%v -c10 -iC1 -c20 -iC1 -c20 -%c10 -iC1 )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+12:48:08	Warning: 	* security warning: maximum number of simultaneous connections limited to 8 to avoid server overload
+12:48:08	Warning: 	* security warning: maximum number of connections per second limited to 5.000000 to avoid server overload
+12:48:09	Warning: 	Note: due to www.babelstone.co.uk remote robots.txt rules, links beginning with these path will be forbidden: /West (see in the options to disable this)
+12:48:17	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneHanPUA.woff2
+12:48:17	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneHan.woff2
+12:48:17	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/han.html (from www.babelstone.co.uk/Fonts/PUA_1_09.html)
+13:00:18	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/VOLT/BabelStoneCentaurian.vtp (from www.babelstone.co.uk/Fonts/Centaurian.html)
+13:00:26	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/VOLT/BabelStonePhagspaSeal_v1.vtp (from www.babelstone.co.uk/Fonts/Phags-pa.html)
+13:00:26	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/VOLT/BabelStonePhagspaSeal_v2.vtp (from www.babelstone.co.uk/Fonts/Phags-pa.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutLFW1986.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutLFW1986X.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutLFW1997.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutHXM2004.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutKYC2006.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutNishida1966.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutSofronov1968.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutWHYJIndex.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/Download/TangutTangutComponents.ttf (from www.babelstone.co.uk/Fonts/TangutScan.html)
+13:11:50	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneTibetan.woff2
+13:11:50	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneFlags.woff2
+13:11:50	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneMayanNumerals.woff2
+13:11:50	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneShapes.woff2
+13:11:50	Error: 	"Not Found" (404) at link www.babelstone.co.uk/Fonts/n4748-xiangqi (from www.babelstone.co.uk/Fonts/Xiangqi.html)
+13:11:50	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneXiangqi.woff2
+13:11:51	Warning: 	File not parsed, looks like binary: www.babelstone.co.uk/Fonts/WOFF/BabelStoneXiangqiColour.woff2
+
+HTTrack Website Copier/3.48-21 mirror complete in 23 minutes 43 seconds : 324 links scanned, 309 files written (117232070 bytes overall), 192 files updated [36180114 bytes received at 25425 bytes/sec]
+(14 errors, 11 warnings, 0 messages)

@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Marchen.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:48:39 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://www.babelstone.co.uk/BabelStone.css" />
+<title>BabelStone Fonts : BabelStone Marchen</title>
+</head>
+<body>
+<h1>BabelStone Fonts</h1>
+<hr/>
+<h2>BabelStone Marchen</h2>
+
+<a name="Description"></a>
+<h3>Description</h3>
+<p><b>BabelStone Marchen</b> is a Unicode font for the <a href="http://babelstone.blogspot.com/2007/05/zhang-zhung-scripts.html" title="BabelStone Blog">sMar-chen</a> script, which was used to write the extinct Zhang-zhung language (see my blog post on the <a href="http://babelstone.blogspot.com/2008/01/zhang-zhung-royal-seal.html" title="BabelStone : Zhang Zhung Royal Seal">Zhang Zhung Royal Seal</a>), and which has also been used to write the Tibetan language in the context of the Bön religion.  This font is based on an experimental Tibetan-mapped font that I released in May 2007 (<a href="http://babelstone.blogspot.com/2007/05/babelstone-tibetan-smar-chen.html" title="BabelStone Blog">BabelStone Tibetan sMar-chen</a>, no longer available).</p>
+<br/>
+
+<p class="centre">Inscription on Temple at the <a href="http://www.thdl.org/texts/reprints/kailash/kailash_08_0102_02.pdf">gYong-drung Bon Monastery</a> in Dolanji (Himachal Pradesh)</p>
+<p class="centre"><img src="http://www.babelstone.co.uk/ZhangZhung/DolanjiTemple1.jpg" title="Inscription on Temple at Dolanji" alt="" /></p>
+<p class="centre"><i>Photograph curtesy of Chris Hatchell</i></p>
+<br/>
+
+<p>This script was added to Unicode v. 9.0 in June 2016 as the Marchen script (see <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4032.pdf" title="SC2/WG2/N4032">N4032</a> and <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4491.pdf" title="SC2/WG2/N4491">N4491</a> for the encoding proposals).  The Marchen script in Unicode consists of 68 characters in the Marchen block in the range 11C70..11CBF: a head mark (11C70), a shad mark (11C71), thirty letters (11C72..11C8F), twenty-nine subjoined letters (11C92..11CA7 and 11CA9..11CAF), a vowel lengthener sign (11CB0), four vowel signs (11CB1..11CB4), anusvara sign (11CB5), and candrabindu sign 11CB6).  Marchen is typographically a complex script, written horizontally from left to right but with vertical stacking of consonants and vowels on the Tibetan model.  The encoding model for Marchen follows Tibetan, so that consonant stacks can be formed by appending one or more subjoined letter to a base letter.  Vowel lengthener, vowels signs, anusvara and candrabindu may be added to a base letter or a consonant stack.  The BabelStone Marchen font supports all stacks used in writing Tibetan and Zhang-zhung, but does not support arbitrary complex stacks required for Sanskrit.  Unlike Tibetan, syllables are not separated with a tsheg mark, and this means that syllable boundaries may be ambiguous in some cases (for example, a letter GA may be either a suffix to the preceding syllable or a prefix to the following syllable).  In ambiguous cases U+200B ZERO WIDTH SPACE may be inserted at the syllable boundary to ensure correct text processing (e.g. word selection).</p>
+<br/>
+<hr/>
+
+<a name="Rendering"></a>
+<h3>Rendering</h3>
+<p>The BabelStone Marchen font supports complex shaping behaviour using OpenType features, but whether these features are applied or not depends on the operating system and the text rendering engine.  Windows 10 uses the <a href="https://www.microsoft.com/typography/OpenTypeDev/USE/intro.htm" title="Creating and supporting OpenType fonts for the Universal Shaping Engine">Universal Shaping Engine</a>, which should support Marchen when it is updated for Unicode 9.0.</p>
+
+<p>As of January 2017, Marchen text displayed with BabelStone Marchen font does not show any shaping behaviour in Microsoft applications (or other applications that rely on Microsoft rendering) under Windows 10. However, version 9.001 of the font has been tested with <a href="https://www.freedesktop.org/wiki/Software/HarfBuzz/">HarfBuzz</a>, and all shaping behaviour works as expected. It is likely that this version of HarfBuzz will be included in Mozilla Firefox version 52, scheduled for release in <a href="https://wiki.mozilla.org/RapidRelease/Calendar">March 2017</a> <small>(see update below)</small>.</p>
+
+<p>In order to test BabelStone Marchen under HarfBuzz on Windows, please follow these steps:<p>
+
+<ol>
+<li>Download and unzip <a href="https://www.freedesktop.org/software/harfbuzz/release/" title="https://www.freedesktop.org/software/harfbuzz/release/">harfbuzz-1.3.4-win32.zip</a> (or latest version).</li>
+<li>Copy BabelStoneMarchen.ttf and <a href="MarchenTest.txt" title="Simple Marchen test file">MarchenTest.txt</a> to the directory containing the downloaded HarfBuzz files.</li>
+<li>Open a command prompt in the directory containing the downloaded HarBuzz files.</li>
+<li>Enter the following command: <span class="mono">type MarchenTest.txt | hb-view.exe BabelStoneMarchen.ttf  --output-format=png --output-file=MarchenTest.png</span></li>
+<li>The file MarchenTest.png should be created in the directory, and should look like <a href="Images/MarchenTest.png" title="MarchenTest.png">this</a>.</li>
+</ol>
+<br/>
+
+<p>As of April 2017, Marchen is supported in both Firefox and Chrome. Please load <a href="Marchen_Test.html">this test file</a> if you want to test Marchen rendering in your browser. If you can see dotted circles then the Marchen text is not rendered correctly.</p>
+<br/>
+<hr/>
+
+<a name="Samples"></a>
+<h3>Samples</h3>
+<p class="centre"><b>BabelStone Marchen</b> (48 points)</p>
+<p class="centre"><img src="Images/sample_marchen.png" title="Sample of the BabelStone Marchen font at 20 points" alt="" /></p>
+<br/>
+<hr/>
+
+<a name="Repertoire"></a>
+<h3>Character Repertoire</h3>
+<p>The tables below render each character in the BabelStone Marchen font (excluding Basic Latin characters), either using the font installed on your local machine or using a <a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format" title="Wikipedia : Web Open Font Format">WOFF font</a> if the font is not installed on your local machine.</p>
+<br/>
+
+<h4>Marchen [<a href="http://www.unicode.org/charts/PDF/U11C70.pdf" title="Unicode code chart for Marchen">11C70..11CBF</a>]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+11C70</td>
+	<td class="sm"><small>MARCHEN HEAD MARK</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱰</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C71</td>
+	<td class="sm"><small>MARCHEN MARK SHAD</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱱</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C72</td>
+	<td class="sm"><small>MARCHEN LETTER KA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱲</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C73</td>
+	<td class="sm"><small>MARCHEN LETTER KHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱳</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C74</td>
+	<td class="sm"><small>MARCHEN LETTER GA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱴</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C75</td>
+	<td class="sm"><small>MARCHEN LETTER NGA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱵</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C76</td>
+	<td class="sm"><small>MARCHEN LETTER CA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱶</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C77</td>
+	<td class="sm"><small>MARCHEN LETTER CHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱷</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C78</td>
+	<td class="sm"><small>MARCHEN LETTER JA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱸</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C79</td>
+	<td class="sm"><small>MARCHEN LETTER NYA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱹</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7A</td>
+	<td class="sm"><small>MARCHEN LETTER TA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱺</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7B</td>
+	<td class="sm"><small>MARCHEN LETTER THA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱻</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7C</td>
+	<td class="sm"><small>MARCHEN LETTER DA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱼</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7D</td>
+	<td class="sm"><small>MARCHEN LETTER NA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱽</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7E</td>
+	<td class="sm"><small>MARCHEN LETTER PA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱾</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C7F</td>
+	<td class="sm"><small>MARCHEN LETTER PHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑱿</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C80</td>
+	<td class="sm"><small>MARCHEN LETTER BA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲀</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C81</td>
+	<td class="sm"><small>MARCHEN LETTER MA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲁</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C82</td>
+	<td class="sm"><small>MARCHEN LETTER TSA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲂</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C83</td>
+	<td class="sm"><small>MARCHEN LETTER TSHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲃</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C84</td>
+	<td class="sm"><small>MARCHEN LETTER DZA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲄</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C85</td>
+	<td class="sm"><small>MARCHEN LETTER WA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲅</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C86</td>
+	<td class="sm"><small>MARCHEN LETTER ZHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲆</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C87</td>
+	<td class="sm"><small>MARCHEN LETTER ZA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲇</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C88</td>
+	<td class="sm"><small>MARCHEN LETTER -A</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲈</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C89</td>
+	<td class="sm"><small>MARCHEN LETTER YA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲉</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8A</td>
+	<td class="sm"><small>MARCHEN LETTER RA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲊</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8B</td>
+	<td class="sm"><small>MARCHEN LETTER LA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲋</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8C</td>
+	<td class="sm"><small>MARCHEN LETTER SHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲌</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8D</td>
+	<td class="sm"><small>MARCHEN LETTER SA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲍</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8E</td>
+	<td class="sm"><small>MARCHEN LETTER HA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲎</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C8F</td>
+	<td class="sm"><small>MARCHEN LETTER A</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲏</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C92</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER KA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲒</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C93</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER KHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲓</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C94</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER GA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲔</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C95</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER NGA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲕</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C96</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER CA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲖</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C97</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER CHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲗</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C98</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER JA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲘</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C99</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER NYA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲙</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9A</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER TA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲚</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9B</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER THA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲛</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9C</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER DA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲜</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9D</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER NA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲝</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9E</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER PA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲞</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11C9F</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER PHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲟</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA0</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER BA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲠</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA1</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER MA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲡</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA2</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER TSA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲢</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA3</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER TSHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲣</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA4</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER DZA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲤</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA5</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER WA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲥</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA6</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER ZHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲦</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA7</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER ZA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲧</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CA9</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER YA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲩</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAA</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER RA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲪</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAB</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER LA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲫</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAC</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER SHA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲬</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAD</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER SA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲭</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAE</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER HA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲮</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CAF</td>
+	<td class="sm"><small>MARCHEN SUBJOINED LETTER A</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲯</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB0</td>
+	<td class="sm"><small>MARCHEN VOWEL SIGN AA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲰</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB1</td>
+	<td class="sm"><small>MARCHEN VOWEL SIGN I</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲱</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB2</td>
+	<td class="sm"><small>MARCHEN VOWEL SIGN U</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲲</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB3</td>
+	<td class="sm"><small>MARCHEN VOWEL SIGN E</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲳</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB4</td>
+	<td class="sm"><small>MARCHEN VOWEL SIGN O</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲴</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB5</td>
+	<td class="sm"><small>MARCHEN SIGN ANUSVARA</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲵</p></td>
+</tr>
+<tr>
+	<td class="sm">U+11CB6</td>
+	<td class="sm"><small>MARCHEN SIGN CANDRABINDU</small></td>
+	<td class="sm"><p class="marchen xxbig">𑲶</p></td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<h4>Tibetan [<a href="http://www.unicode.org/charts/PDF/U0F00.pdf" title="Unicode code chart for Tibetan">0F00..0FFF</a>]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+0FD5</td>
+	<td class="sm"><small>RIGHT-FACING SVASTI SIGN</small></td>
+	<td class="sm"><p class="marchen xxbig">࿕</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD6</td>
+	<td class="sm"><small>LEFT-FACING SVASTI SIGN</small></td>
+	<td class="sm"><p class="marchen xxbig">࿖</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD7</td>
+	<td class="sm"><small>RIGHT-FACING SVASTI SIGN WITH DOTS</small></td>
+	<td class="sm"><p class="marchen xxbig">࿗</p></td>
+</tr>
+<tr>
+	<td class="sm">U+0FD8</td>
+	<td class="sm"><small>LEFT-FACING SVASTI SIGN WITH DOTS</small></td>
+	<td class="sm"><p class="marchen xxbig">࿘</p></td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Features"></a>
+<h3>OpenType Features</h3>
+<p>[<a href="VOLT/BabelStoneMarchen.html" title="Click here to download the VOLT project file for the latest version of this font">VOLT project file</a>]</p>
+<br/>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Script</th>
+	<th class="sm">Language</th>
+	<th class="sm">Features</th>
+	<th class="sm">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl" rowspan="5">Marchen &lt;marc&gt;</td>
+	<td class="sl" rowspan="5">Default &lt;dflt&gt;</td>
+	<td class="sl">Above-base Mark Positioning &lt;abvm&gt;</td>
+	<td class="sl">For Anusvara (U+11CB5) and Candrabindu (U+11CB6)</td>
+</tr>
+<tr>
+	<td class="sl">Above-base Substitutions &lt;abvs&gt;</td>
+	<td class="sl">For vowel signs E (U+11CB3) and O (U+11CB4)</td>
+</tr>
+<tr>
+	<td class="sl">Below-base Substitutions &lt;blws&gt;</td>
+	<td class="sl">For subjoined letters and for vowel sign U (U+11CB2)</td>
+</tr>
+<tr>
+	<td class="sl">Pre-base Substitutions &lt;pres&gt;</td>
+	<td class="sl">For vowel sign I (U+11CB1)</td>
+</tr>
+<tr>
+	<td class="sl">Post-base Substitutions &lt;psts&gt;</td>
+	<td class="sl">For Subjoined Ya (U+11CA9)</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Versions"></a>
+<h3>Version History</h3>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Font</th>
+	<th class="sm">Version</th>
+	<th class="sm">Date</th>
+	<th class="sm">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">BabelStone Marchen</td>
+	<td class="sl">9.000</td>
+	<td class="sl">2017-01-01</td>
+	<td class="sl">Initial release, supporting Unicode 9.0. At time of release, shaping behaviour does not work with Microsoft applications under Windows 10.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Marchen</td>
+	<td class="sl">9.001</td>
+	<td class="sl">2017-01-05</td>
+	<td class="sl">OpenType features modified to work correctly with HarfBuzz v. 1.3.4.</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Download"></a>
+<h3>Download</h3>
+<p>BabelStone Marchen is licensed under the <a href="http://scripts.sil.org/OFL" title="SIL Open Font License (OFL)">SIL Open Font License</a> 1.1, which means you are free to use it for personal or commercial purposes, and to redistribute it by itself or as part of a free or commercial software package, just as long as you do not sell the font on its own.  The license also allows you to modify the font in any way you like, as long as the modified font does not use "BabelStone" in its name.  Please read the <a href="BabelStoneOFL.txt" title="OFL License">license</a> for details.</p>
+<br/>
+
+<ul>
+<li><a href="Download/BabelStoneMarchen.ttf" title="Click here to download">Download BabelStone Marchen</a> v. 9.001 (2017-01-05)</li>
+</ul>
+<br/>
+<hr class="toe" />
+<p class="centre"><a href="index.html">BabelStone Fonts</a></p>
+</body>
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Marchen.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:48:46 GMT -->
+</html>

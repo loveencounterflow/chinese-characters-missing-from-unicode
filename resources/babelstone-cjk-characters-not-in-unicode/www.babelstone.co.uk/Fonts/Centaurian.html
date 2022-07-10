@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Centaurian.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:48:19 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://www.babelstone.co.uk/BabelStone.css" />
+<title>BabelStone Fonts : BabelStone Centaurian</title>
+</head>
+<body>
+<h1>BabelStone Fonts</h1>
+<hr/>
+<h2>BabelStone Centaurian</h2>
+
+<a name="Description"></a>
+<h3>Description</h3>
+<p><b>BabelStone Centaurian</b> is a font based on the <a href="http://en.wikipedia.org/wiki/Centaurian" title="Wikipedia">Centaurian alphabet</a> used in the first UK edition of <a href="http://www.eoincolfer.com/books/artemisfowl/artemisfowlarcticincident.html" title="The Arctic Incident">Artemis Fowl : The Arctic Incident</a> by Eoin Colfer (it has been replaced by the ubiquitous <a href="http://en.wikipedia.org/wiki/Gnommish" title="Wikipedia">Gnommish script</a> in the American and recent UK editions). See <a href="http://babelstone.blogspot.com/2008/02/pigpen-and-fowl-fonts.html" title="BabelStone Blog">Pigpen and Fowl Fonts</a> for more information.</p>
+
+<p>The Centaurian alphabet is cypher of the English alphabet, but with the twist that the space character is a non-blank glyph and the character corresponding to the letter T is a blank space. Creating a non-blank glyph for the space character proved to be quite problematic as Windows apparently always uses the space character (U+0020) as the break character regardless of what you define the break character to be in the font (the <b>usBreakChar</b> member of the OS/2 table), and if the glyph mapped to U+0020 is not blank all sorts of unpleasant things happen when you try to use the font (see <a href="http://blogs.msdn.com/michkap/archive/2006/06/21/641030.aspx">Sorting It All Out</a> for further details). In my font I hack around the problem using advanced OpenType features—I make the glyph for U+0020 blank, but unconditionally substitute the desired non-blank glyph for the space character in the GSUB table. This works on Windows as long as your system has <a href="http://en.wikipedia.org/wiki/Uniscribe">Uniscribe</a> version 1.420.2600.2180 or later of installed (i.e. you are running Windows XP SP2 or later). If you are running an earlier version of Windows (e.g. Windows 95, 98 or Me), or if you want to use the font with an application that does not support advanced OpenType features, you can access the special space glyph by using the underscore (_) character.</p>
+
+<p>None of the text samples in Centaurian that I have access to use the letters "J" or "Z", so I have devised my own glyphs for these two letters. I have also devised my own glyphs for the digits 0..9 and all the punctuation marks and symbols in the Basic Latin block (U+0000..U+007F). Note that uppercase and lowercase letters are identical.</p>
+<br/>
+<hr/>
+
+<a name="Samples"></a>
+<h3>Samples</h3>
+<p class="centre"><b>BabelStone Centaurian</b> (20 points)</p>
+<p class="centre"><img src="Images/centaurian_sample.jpg" title="Sample of the BabelStone Centaurian font at 20 points" alt="" /></p>
+<p class="centre"><i>The Arctic Incident</i> (UK 2002 edition) page 145</p>
+<br/>
+<hr/>
+
+<a name="Repertoire"></a>
+<h3>Character Repertoire</h3>
+<p>The tables below render each character in the BabelStone Centaurian font, either using the font installed on your local machine or using a <a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format" title="Wikipedia : Web Open Font Format">WOFF font</a> if the font is not installed on your local machine.</p>
+<br/>
+
+<h4>Basic Latin [0000..007F]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+0009</td>
+	<td class="sm"><small>TAB</small></td>
+	<td class="sm"><span class="centaurian med"> </span></td>
+</tr>
+<tr>
+	<td class="sm">U+0020</td>
+	<td class="sm"><small>SPACE</small></td>
+	<td class="sm"><span class="centaurian med"> </span></td>
+</tr>
+<tr>
+	<td class="sm">U+0021</td>
+	<td class="sm"><small>EXCLAMATION MARK</small></td>
+	<td class="sm"><span class="centaurian med">!</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0022</td>
+	<td class="sm"><small>QUOTATION MARK</small></td>
+	<td class="sm"><span class="centaurian med">"</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0023</td>
+	<td class="sm"><small>NUMBER SIGN</small></td>
+	<td class="sm"><span class="centaurian med">#</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0024</td>
+	<td class="sm"><small>DOLLAR SIGN</small></td>
+	<td class="sm"><span class="centaurian med">$</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0025</td>
+	<td class="sm"><small>PERCENT SIGN</small></td>
+	<td class="sm"><span class="centaurian med">%</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0026</td>
+	<td class="sm"><small>AMPERSAND</small></td>
+	<td class="sm"><span class="centaurian med">&amp;</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0027</td>
+	<td class="sm"><small>APOSTROPHE</small></td>
+	<td class="sm"><span class="centaurian med">'</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0028</td>
+	<td class="sm"><small>LEFT PARENTHESIS</small></td>
+	<td class="sm"><span class="centaurian med">(</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0029</td>
+	<td class="sm"><small>RIGHT PARENTHESIS</small></td>
+	<td class="sm"><span class="centaurian med">)</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002A</td>
+	<td class="sm"><small>ASTERISK</small></td>
+	<td class="sm"><span class="centaurian med">*</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002B</td>
+	<td class="sm"><small>PLUS SIGN</small></td>
+	<td class="sm"><span class="centaurian med">+</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002C</td>
+	<td class="sm"><small>COMMA</small></td>
+	<td class="sm"><span class="centaurian med">,</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002D</td>
+	<td class="sm"><small>HYPHEN-MINUS</small></td>
+	<td class="sm"><span class="centaurian med">-</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002E</td>
+	<td class="sm"><small>FULL STOP</small></td>
+	<td class="sm"><span class="centaurian med">.</span></td>
+</tr>
+<tr>
+	<td class="sm">U+002F</td>
+	<td class="sm"><small>SOLIDUS</small></td>
+	<td class="sm"><span class="centaurian med">/</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0030</td>
+	<td class="sm"><small>DIGIT ZERO</small></td>
+	<td class="sm"><span class="centaurian med">0</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0031</td>
+	<td class="sm"><small>DIGIT ONE</small></td>
+	<td class="sm"><span class="centaurian med">1</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0032</td>
+	<td class="sm"><small>DIGIT TWO</small></td>
+	<td class="sm"><span class="centaurian med">2</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0033</td>
+	<td class="sm"><small>DIGIT THREE</small></td>
+	<td class="sm"><span class="centaurian med">3</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0034</td>
+	<td class="sm"><small>DIGIT FOUR</small></td>
+	<td class="sm"><span class="centaurian med">4</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0035</td>
+	<td class="sm"><small>DIGIT FIVE</small></td>
+	<td class="sm"><span class="centaurian med">5</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0036</td>
+	<td class="sm"><small>DIGIT SIX</small></td>
+	<td class="sm"><span class="centaurian med">6</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0037</td>
+	<td class="sm"><small>DIGIT SEVEN</small></td>
+	<td class="sm"><span class="centaurian med">7</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0038</td>
+	<td class="sm"><small>DIGIT EIGHT</small></td>
+	<td class="sm"><span class="centaurian med">8</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0039</td>
+	<td class="sm"><small>DIGIT NINE</small></td>
+	<td class="sm"><span class="centaurian med">9</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003A</td>
+	<td class="sm"><small>COLON</small></td>
+	<td class="sm"><span class="centaurian med">:</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003B</td>
+	<td class="sm"><small>SEMICOLON</small></td>
+	<td class="sm"><span class="centaurian med">;</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003C</td>
+	<td class="sm"><small>LESS-THAN SIGN</small></td>
+	<td class="sm"><span class="centaurian med">&lt;</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003D</td>
+	<td class="sm"><small>EQUALS SIGN</small></td>
+	<td class="sm"><span class="centaurian med">=</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003E</td>
+	<td class="sm"><small>GREATER-THAN SIGN</small></td>
+	<td class="sm"><span class="centaurian med">&gt;</span></td>
+</tr>
+<tr>
+	<td class="sm">U+003F</td>
+	<td class="sm"><small>QUESTION MARK</small></td>
+	<td class="sm"><span class="centaurian med">?</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0040</td>
+	<td class="sm"><small>COMMERCIAL AT</small></td>
+	<td class="sm"><span class="centaurian med">@</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0041</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A</small></td>
+	<td class="sm"><span class="centaurian med">A</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0042</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER B</small></td>
+	<td class="sm"><span class="centaurian med">B</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0043</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER C</small></td>
+	<td class="sm"><span class="centaurian med">C</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0044</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER D</small></td>
+	<td class="sm"><span class="centaurian med">D</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0045</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER E</small></td>
+	<td class="sm"><span class="centaurian med">E</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0046</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER F</small></td>
+	<td class="sm"><span class="centaurian med">F</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0047</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER G</small></td>
+	<td class="sm"><span class="centaurian med">G</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0048</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER H</small></td>
+	<td class="sm"><span class="centaurian med">H</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0049</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER I</small></td>
+	<td class="sm"><span class="centaurian med">I</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004A</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER J</small></td>
+	<td class="sm"><span class="centaurian med">J</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004B</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER K</small></td>
+	<td class="sm"><span class="centaurian med">K</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004C</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER L</small></td>
+	<td class="sm"><span class="centaurian med">L</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004D</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER M</small></td>
+	<td class="sm"><span class="centaurian med">M</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004E</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER N</small></td>
+	<td class="sm"><span class="centaurian med">N</span></td>
+</tr>
+<tr>
+	<td class="sm">U+004F</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O</small></td>
+	<td class="sm"><span class="centaurian med">O</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0050</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER P</small></td>
+	<td class="sm"><span class="centaurian med">P</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0051</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER Q</small></td>
+	<td class="sm"><span class="centaurian med">Q</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0052</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER R</small></td>
+	<td class="sm"><span class="centaurian med">R</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0053</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER S</small></td>
+	<td class="sm"><span class="centaurian med">S</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0054</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER T</small></td>
+	<td class="sm"><span class="centaurian med">T</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0055</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER U</small></td>
+	<td class="sm"><span class="centaurian med">U</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0056</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER V</small></td>
+	<td class="sm"><span class="centaurian med">V</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0057</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER W</small></td>
+	<td class="sm"><span class="centaurian med">W</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0058</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER X</small></td>
+	<td class="sm"><span class="centaurian med">X</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0059</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER Y</small></td>
+	<td class="sm"><span class="centaurian med">Y</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005A</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER Z</small></td>
+	<td class="sm"><span class="centaurian med">Z</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005B</td>
+	<td class="sm"><small>LEFT SQUARE BRACKET</small></td>
+	<td class="sm"><span class="centaurian med">[</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005C</td>
+	<td class="sm"><small>REVERSE SOLIDUS</small></td>
+	<td class="sm"><span class="centaurian med">\</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005D</td>
+	<td class="sm"><small>RIGHT SQUARE BRACKET</small></td>
+	<td class="sm"><span class="centaurian med">]</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005E</td>
+	<td class="sm"><small>CIRCUMFLEX ACCENT</small></td>
+	<td class="sm"><span class="centaurian med">^</span></td>
+</tr>
+<tr>
+	<td class="sm">U+005F</td>
+	<td class="sm"><small>LOW LINE</small></td>
+	<td class="sm"><span class="centaurian med">_</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0060</td>
+	<td class="sm"><small>GRAVE ACCENT</small></td>
+	<td class="sm"><span class="centaurian med">`</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0061</td>
+	<td class="sm"><small>LATIN SMALL LETTER A</small></td>
+	<td class="sm"><span class="centaurian med">a</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0062</td>
+	<td class="sm"><small>LATIN SMALL LETTER B</small></td>
+	<td class="sm"><span class="centaurian med">b</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0063</td>
+	<td class="sm"><small>LATIN SMALL LETTER C</small></td>
+	<td class="sm"><span class="centaurian med">c</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0064</td>
+	<td class="sm"><small>LATIN SMALL LETTER D</small></td>
+	<td class="sm"><span class="centaurian med">d</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0065</td>
+	<td class="sm"><small>LATIN SMALL LETTER E</small></td>
+	<td class="sm"><span class="centaurian med">e</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0066</td>
+	<td class="sm"><small>LATIN SMALL LETTER F</small></td>
+	<td class="sm"><span class="centaurian med">f</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0067</td>
+	<td class="sm"><small>LATIN SMALL LETTER G</small></td>
+	<td class="sm"><span class="centaurian med">g</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0068</td>
+	<td class="sm"><small>LATIN SMALL LETTER H</small></td>
+	<td class="sm"><span class="centaurian med">h</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0069</td>
+	<td class="sm"><small>LATIN SMALL LETTER I</small></td>
+	<td class="sm"><span class="centaurian med">i</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006A</td>
+	<td class="sm"><small>LATIN SMALL LETTER J</small></td>
+	<td class="sm"><span class="centaurian med">j</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006B</td>
+	<td class="sm"><small>LATIN SMALL LETTER K</small></td>
+	<td class="sm"><span class="centaurian med">k</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006C</td>
+	<td class="sm"><small>LATIN SMALL LETTER L</small></td>
+	<td class="sm"><span class="centaurian med">l</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006D</td>
+	<td class="sm"><small>LATIN SMALL LETTER M</small></td>
+	<td class="sm"><span class="centaurian med">m</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006E</td>
+	<td class="sm"><small>LATIN SMALL LETTER N</small></td>
+	<td class="sm"><span class="centaurian med">n</span></td>
+</tr>
+<tr>
+	<td class="sm">U+006F</td>
+	<td class="sm"><small>LATIN SMALL LETTER O</small></td>
+	<td class="sm"><span class="centaurian med">o</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0070</td>
+	<td class="sm"><small>LATIN SMALL LETTER P</small></td>
+	<td class="sm"><span class="centaurian med">p</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0071</td>
+	<td class="sm"><small>LATIN SMALL LETTER Q</small></td>
+	<td class="sm"><span class="centaurian med">q</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0072</td>
+	<td class="sm"><small>LATIN SMALL LETTER R</small></td>
+	<td class="sm"><span class="centaurian med">r</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0073</td>
+	<td class="sm"><small>LATIN SMALL LETTER S</small></td>
+	<td class="sm"><span class="centaurian med">s</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0074</td>
+	<td class="sm"><small>LATIN SMALL LETTER T</small></td>
+	<td class="sm"><span class="centaurian med">t</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0075</td>
+	<td class="sm"><small>LATIN SMALL LETTER U</small></td>
+	<td class="sm"><span class="centaurian med">u</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0076</td>
+	<td class="sm"><small>LATIN SMALL LETTER V</small></td>
+	<td class="sm"><span class="centaurian med">v</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0077</td>
+	<td class="sm"><small>LATIN SMALL LETTER W</small></td>
+	<td class="sm"><span class="centaurian med">w</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0078</td>
+	<td class="sm"><small>LATIN SMALL LETTER X</small></td>
+	<td class="sm"><span class="centaurian med">x</span></td>
+</tr>
+<tr>
+	<td class="sm">U+0079</td>
+	<td class="sm"><small>LATIN SMALL LETTER Y</small></td>
+	<td class="sm"><span class="centaurian med">y</span></td>
+</tr>
+<tr>
+	<td class="sm">U+007A</td>
+	<td class="sm"><small>LATIN SMALL LETTER Z</small></td>
+	<td class="sm"><span class="centaurian med">z</span></td>
+</tr>
+<tr>
+	<td class="sm">U+007B</td>
+	<td class="sm"><small>LEFT CURLY BRACKET</small></td>
+	<td class="sm"><span class="centaurian med">{</span></td>
+</tr>
+<tr>
+	<td class="sm">U+007C</td>
+	<td class="sm"><small>VERTICAL LINE</small></td>
+	<td class="sm"><span class="centaurian med">|</span></td>
+</tr>
+<tr>
+	<td class="sm">U+007D</td>
+	<td class="sm"><small>RIGHT CURLY BRACKET</small></td>
+	<td class="sm"><span class="centaurian med">}</span></td>
+</tr>
+<tr>
+	<td class="sm">U+007E</td>
+	<td class="sm"><small>TILDE</small></td>
+	<td class="sm"><span class="centaurian med">~</span></td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<h4>Latin-1 Supplement [0080..00FF]</h4>
+<table class="solid">
+<thead>
+<tr>
+	<th class="sm">Code Point</th>
+	<th class="sm">Character Name</th>
+	<th class="sm">Glyph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">U+00A0</td>
+	<td class="sm"><small>NO-BREAK SPACE</small></td>
+	<td class="sm"><span class="centaurian med"> </span></td>
+</tr>
+<tr>
+	<td class="sm">U+00B4</td>
+	<td class="sm"><small>ACUTE ACCENT</small></td>
+	<td class="sm"><span class="centaurian med">´</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C0</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">À</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C1</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">Á</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C2</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">Â</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C3</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">Ã</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C4</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">Ä</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C5</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER A WITH RING ABOVE</small></td>
+	<td class="sm"><span class="centaurian med">Å</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C6</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER AE</small></td>
+	<td class="sm"><span class="centaurian med">Æ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C7</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER C WITH CEDILLA</small></td>
+	<td class="sm"><span class="centaurian med">Ç</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C8</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER E WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">È</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00C9</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER E WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">É</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CA</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER E WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">Ê</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CB</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER E WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">Ë</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CC</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER I WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">Ì</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CD</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER I WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">Í</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CE</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER I WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">Î</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00CF</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER I WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">Ï</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D0</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER ETH</small></td>
+	<td class="sm"><span class="centaurian med">Ð</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D1</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER N WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">Ñ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D2</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">Ò</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D3</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">Ó</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D4</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">Ô</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D5</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">Õ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D6</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">Ö</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D8</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER O WITH STROKE</small></td>
+	<td class="sm"><span class="centaurian med">Ø</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00D9</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER U WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">Ù</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00DA</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER U WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">Ú</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00DB</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER U WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">Û</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00DC</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER U WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">Ü</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00DD</td>
+	<td class="sm"><small>LATIN CAPITAL LETTER Y WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">Ý</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E0</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">à</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E1</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">á</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E2</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">â</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E3</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">ã</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E4</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ä</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E5</td>
+	<td class="sm"><small>LATIN SMALL LETTER A WITH RING ABOVE</small></td>
+	<td class="sm"><span class="centaurian med">å</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E6</td>
+	<td class="sm"><small>LATIN SMALL LETTER AE</small></td>
+	<td class="sm"><span class="centaurian med">æ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E7</td>
+	<td class="sm"><small>LATIN SMALL LETTER C WITH CEDILLA</small></td>
+	<td class="sm"><span class="centaurian med">ç</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E8</td>
+	<td class="sm"><small>LATIN SMALL LETTER E WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">è</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00E9</td>
+	<td class="sm"><small>LATIN SMALL LETTER E WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">é</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00EA</td>
+	<td class="sm"><small>LATIN SMALL LETTER E WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">ê</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00EB</td>
+	<td class="sm"><small>LATIN SMALL LETTER E WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ë</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00EC</td>
+	<td class="sm"><small>LATIN SMALL LETTER I WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">ì</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00ED</td>
+	<td class="sm"><small>LATIN SMALL LETTER I WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">í</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00EE</td>
+	<td class="sm"><small>LATIN SMALL LETTER I WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">î</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00EF</td>
+	<td class="sm"><small>LATIN SMALL LETTER I WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ï</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F0</td>
+	<td class="sm"><small>LATIN SMALL LETTER ETH</small></td>
+	<td class="sm"><span class="centaurian med">ð</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F1</td>
+	<td class="sm"><small>LATIN SMALL LETTER N WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">ñ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F2</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">ò</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F3</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">ó</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F4</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">ô</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F5</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH TILDE</small></td>
+	<td class="sm"><span class="centaurian med">õ</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F6</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ö</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F8</td>
+	<td class="sm"><small>LATIN SMALL LETTER O WITH STROKE</small></td>
+	<td class="sm"><span class="centaurian med">ø</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00F9</td>
+	<td class="sm"><small>LATIN SMALL LETTER U WITH GRAVE</small></td>
+	<td class="sm"><span class="centaurian med">ù</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00FA</td>
+	<td class="sm"><small>LATIN SMALL LETTER U WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">ú</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00FB</td>
+	<td class="sm"><small>LATIN SMALL LETTER U WITH CIRCUMFLEX</small></td>
+	<td class="sm"><span class="centaurian med">û</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00FC</td>
+	<td class="sm"><small>LATIN SMALL LETTER U WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ü</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00FD</td>
+	<td class="sm"><small>LATIN SMALL LETTER Y WITH ACUTE</small></td>
+	<td class="sm"><span class="centaurian med">ý</span></td>
+</tr>
+<tr>
+	<td class="sm">U+00FF</td>
+	<td class="sm"><small>LATIN SMALL LETTER Y WITH DIAERESIS</small></td>
+	<td class="sm"><span class="centaurian med">ÿ</span></td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Features"></a>
+<h3>OpenType Features</h3>
+<p>[<a href="VOLT/BabelStoneCentaurian.html" title="Click here to download the VOLT project file for the latest version of this font">VOLT project file</a>]</p>
+<br/>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Script</th>
+	<th class="sm">Language</th>
+	<th class="sm">Features</th>
+	<th class="sm">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">Latin &lt;latn&gt;</td>
+	<td class="sl">Default &lt;dflt&gt;</td>
+	<td class="sl">Glyph Composition Decomposition &lt;ccmp&gt;</td>
+	<td class="sl">Substitution of non-blank glyph for the space character</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Versions"></a>
+<h3>Version History</h3>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Font</th>
+	<th class="sm">Version</th>
+	<th class="sm">Date</th>
+	<th class="sm">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">BabelStone Centaurian</td>
+	<td class="sl">1.00</td>
+	<td class="sl">2008-02-02</td>
+	<td class="sl">Initial release</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Centaurian</td>
+	<td class="sl">1.01</td>
+	<td class="sl">2013-11-06</td>
+	<td class="sl">Licensed under <a href="http://scripts.sil.org/OFL" title="SIL Open Font License (OFL)">SIL Open Font License</a> 1.1</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Download"></a>
+<h3>Download</h3>
+<p>BabelStone Centaurian is licensed under the <a href="http://scripts.sil.org/OFL" title="SIL Open Font License (OFL)">SIL Open Font License</a> 1.1, which means you are free to use it for personal or commercial purposes, and to redistribute it by itself or as part of a free or commercial software package, just as long as you do not sell the font on its own.  The license also allows you to modify the font in any way you like, as long as the modified font does not use "BabelStone" in its name.  Please read the <a href="BabelStoneOFL.txt" title="OFL License">license</a> for details.</p>
+<br/>
+
+<ul>
+<li><a href="Download/BabelStoneCentaurian.ttf" title="Click here to download">Download BabelStone Centaurian</a> v. 1.01 (2013-11-06)</li>
+</ul>
+<br/>
+<hr class="toe" />
+<p class="centre"><a href="index.html">BabelStone Fonts</a></p>
+</body>
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Centaurian.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:48:22 GMT -->
+</html>

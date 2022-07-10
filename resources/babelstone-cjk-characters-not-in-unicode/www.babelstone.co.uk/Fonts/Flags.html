@@ -1,0 +1,1173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Flags.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:57:00 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://www.babelstone.co.uk/BabelStone.css" />
+<title>BabelStone Fonts : BabelStone Flags</title>
+</head>
+<body>
+<h1>BabelStone Fonts</h1>
+<hr/>
+<h2>BabelStone Flags</h2>
+
+<a name="Description"></a>
+<h3>Description</h3>
+<p><b>BabelStone Flags</b> v. 2.07 is a font that supports multicolour flag glyphs for Unicode character sequences representing various national, sub-national, supra-national, and miscellaneous flags. The font is under development, and does not yet support all national flags of the world. The current version of the font includes glyphs for 155 flags in total. The font uses the COLR/CPAL format for layered colour fonts, which is supported by all major browsers (including IE11, Edge, Firefox, and Chrome). The colour flags for national flags (represented as Regional Indicator Sequences) should display correctly on the latest versions of all browsers as well as in Microsoft Word 2016, but the colour flags for sub-national regions (represented as Flag Emoji Tag sequences) do not currently display in IE11 and Edge browsers (works OK in Firefox and Chrome).</p>
+  
+<p>This font supports the two mechanisms for representing country and region flags described in the proposed update to <a href="http://www.unicode.org/reports/tr51/proposed.html" title="Unicode Technical Standard #51: Unicode Emoji">Unicode Technical Standard #51</a> (Unicode Emoji): Regional Indicator Sequences and Flag Emoji Tag Sequences. These sequences are defined in the <a href="http://www.unicode.org/Public/emoji/5.0/">Emoji 5.0 data</a>.</p>
+
+<br/>
+<p class="centre"><img src="Images/ColourFlagGlyphs.png" title="Colour flag glyphs at 48 points in Firefox browser" alt="" /></p>
+<br/>
+
+<a name="RIS"></a>
+<h4>Regional Indicator Sequences</h4>
+<p>These are sequences of two Regional Indicator letter symbols (1F1E6..1F1FF = A..Z) corresponding to <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" title="Wikipedia : ISO 3166-1 alpha-2">ISO 3166-1 alpha-2</a> two-letter country codes <small>(technically the Unicode Standard references Unicode region subtags defined in <a href="http://unicode.org/reports/tr35/" title="Unicode Technical Standard #35 : Unicode Locale Data Markup Language (LDML)">CLDR</a>, which are derived from ISO 3166-1 codes)</small>. For example, the country code for USA ("US") is represented by the Unicode character sequence &lt;1F1FA 1F1F8&gt; (RIS-U, RIS-S). If a particular <span title="Regional Indicator">RI</span> sequence is not supported, it should fallback to displaying as two individual Regional Indicator letter symbols (generally a boxed capital letter A through Z).</p>
+
+<p>As the boundary between adjacent <span title="Regional Indicator">RI</span> sequences is not indicated at the encoding level, it is possible to get unexpected diplay results for consecutive sequences of more than two RI symbols. For example, you may put a sequence of four RI symbols AQAZ on your web page, which you intend to render as the flags of Antarctica (AQ) and Azerbaijan (AZ), but if a visitor's browser does not support the flag of Antarctica the result for them may be the flag of Qatar (QA) sandwiched between orphaned RI symbols A and Z. To avoid getting the wrong flags displayed it is safest to separate consecutive <span title="Regional Indicator">RI</span> sequences with a space character or punctuation mark.</p>
+
+<p>BabelStone Flags currently supports flags for 105 countries, territories or international entities with an ISO 3166-1 code, including all the countries of Europe. It also supports the historic flag of the Soviet Union (SU), even though this is not conformant to the Unicode Standard as the ISO 3166-1 code SU is exceptionally reserved (but as it is exceptionally reserved the code cannot be used for anything else, and so it is safe to use it for the flag of the Soviet Union).</p>
+
+<p>BabelStone Flags also has experimental support for some historical versions of national flags using variation sequences. This mechanism is not conformant to the Unicode Standard, as these variation sequences are not defined in the Unicode Standard, but it works with most browsers (verified as working with IE11, Edge, Firefox 58, as well as in Microsoft Word 2016; but not working for me with Chrome 64). At present the font supports the following historical versions of flags:</p>
+<ul>
+<li>Mauritania 1959–2017 flag as MR + VS1 &lt;1F1F2 1F1F7 FE00&gt;</li>
+<li>Mauritania 2017– flag as MR + VS2 &lt;1F1F2 1F1F7 FE01&gt; (this is the default for MR alone)</li>
+</ul>
+<br/>
+
+<a name="Tags"></a>
+<h4>Flag Emoji Tag Sequences</h4>
+<p>These are sequences of a waving black flag character (U+1F3F4 🏴) followed by four or five lowercase tag letters (E0061..E007A) and/or tag digits (E0030..E0039) terminated by a cancel tag (E007F). These sequences correspond to <a href="https://en.wikipedia.org/wiki/ISO_3166-2" title="Wikipedia : ISO 3166-2">ISO 3166-2</a> codes representing subdivisions of countries listed in ISO 3166-1 (e.g. states, provinces, counties, autonomous regions), but with the hyphen omitted, so for example the ISO 3166-2 code GB-SCT for Scotland is represented by this sequence of seven Unicode characters: &lt;1F3F4 E0067 E0062 E0073 E0063 E0074 E007F&gt; (Waving Black Flag, Tag-g, Tag-b, Tag-s, Tag-c, Tag-t, Cancel Tag).  <small>(Technically the Unicode Standard references Unicode subdivisionIDs defined in <a href="http://unicode.org/reports/tr35/" title="Unicode Technical Standard #35 : Unicode Locale Data Markup Language (LDML)">CLDR</a>, which are derived from ISO 3166-2 codes.)</small></p>
+
+<p>Tag characters are default ignorable and invisible, so if a flag tag sequence is not supported on a particular system it will fallback to displaying as a waving black flag. Thus, if you have a web site showing two different flag characters together (for example the England and Scotland flags), they may display correctly on your browser, but some visitors using different browsers may only see two identical waving black flags, which can be a little confusing !</p>
+
+<p>BabelStone Flags currently supports 44 sub-national flags for Belgium, Canada, France, Germany, Ireland, Netherlands, Spain, Switzerland, United Kingdom, and the United States:</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:BE" title="Wikipedia : ISO 3166-2:BE">Belgium</a>: Brussels-Capital Region (BE-BRU), Flemish Region (BE-VLG), Walloon Region (BE-WAL).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:CA" title="Wikipedia : ISO 3166-2:CA">Canada</a>: Newfoundland and Labrador (CA-NL), Nunavut (CA-NU), and Quebec (CA-QC).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:FR" title="Wikipedia : ISO 3166-2:FR">France</a>: Bretagne (FR-BRE).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:DE" title="Wikipedia : ISO 3166-2:DE">Germany</a>: Bavaria (DE-BY).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:IE" title="Wikipedia : ISO 3166-2:IE">Ireland</a>: Connacht (IE-C), Leinster (IE-L), Munster (IE-M), and Ulster (IE-U).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:NL" title="Wikipedia : ISO 3166-2:NL">Netherlands</a>: Friesland (NL-FR).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:ES" title="Wikipedia : ISO 3166-2:ES">Spain</a>: Catalonia (ES-CT), and Basque Country (ES-PV).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:CH" title="Wikipedia : ISO 3166-2:CH">Switzerland</a>: Fribourg (CH-FR), Luzern (CH-LU), Neuchâtel (CH-NE), Solothurn (CH-SO), Schwyz (CH-SZ), Ticino (CH-TI), Valais (VS), Zug (CH-ZG), and Zürich (CH-ZH).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB" title="Wikipedia : ISO 3166-2:GB">United Kingdom</a>: England (GB-ENG), Scotland (GB-SCT), Wales (GB-WLS), Northern Ireland (GB-NIR); Anglesey (GB-AGY), Cornwall (GB-CON), Devon (GB-DEV), Dorset (GB-DOR), Flintshire (GB-FLN), Monmouthshire (GB-MON), Northumberland (GB-NBL), Orkney Islands (GB-ORK), Pembrokeshire (GB-PEM), Surrey (GB-SRY), Vale of Glamorgan (GB-VGL), and Shetland Islands (GB-ZET).</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_3166-2:US" title="Wikipedia : ISO 3166-2:US">United States</a>: Alaska (US-AK), California (US-CA), Hawaii (US-HI), and Texas (US-TX).</li>
+</ul>
+
+<p>Only three of these are recommended for implementation by the Unicode Consortium (flags for England, Scotland, and Wales), but the rest are not recommended not to be implemented. Note that there is no official flag for Northern Ireland, but as the <a href="https://en.wikipedia.org/wiki/Ulster_Banner" title="Wikipedia : Ulster Banner">Ulster Banner</a> is used to represent Northern Ireland in major international sporting competitions such as the <a href="https://www.fifa.com/worldcup/teams/team=43952/index.html" title="FIFA World Cup : Northern Ireland">FIFA World Cup</a>, this flag is used for GB-NIR in BabelStone Flags. The synonym for Wales, GB-CYM, defined in BS 6879 but not listed in ISO 3166-2, is also supported in BabelStone Flags.</p>
+
+<p>BabelStone Flags also includes four flags for historic English, Scottish and Welsh counties that do not have an ISO 3166-2 code. In these cases I have made up an unofficial GB code with "X" as the first letter of the subdivision code (e.g. GB-XCR for Caernarfonshire). These are indicated with three stars in the table of Flags for ISO 3166-2 Country Subdivision Codes below.</p>
+
+<p>There are two official <a href="https://en.wikipedia.org/wiki/Flag_of_Bavaria" title="Wikipedia : Flag of Bavaria">flags for Bavaria</a>, one striped and one with lozenges. In my font the striped flag is the default, but the striped and lozenge versions can be selected by applying VS1 and VS2 respectively after the waving black flag. However, this hack only works under the Firefox browser.</p>
+
+<p>BabelStone Flags also supports Flag Emoji tag sequences for ISO 3166-1 two-letter country codes (i.e. the US flag can be represented either as &lt;1F1FA 1F1F8&gt; or as &lt;1F3F4 E0075 E0073 E007F&gt;). I am unclear from the rather imprecise description of Flag Emoji tag sequences given in Annex C of <a href="http://www.unicode.org/reports/tr51/proposed.html#valid-emoji-tag-sequences" title="Unicode Technical Standard #51: Unicode Emoji : Annex C">Unicode Technical Standard #51</a> whether this is conformant with the Unicode Standard or not; but it seems logical to support all geopolitical flags as tag sequences.</p>
+<br/>
+
+<a name="ZWJ"></a>
+<h4>Zero Width Joiner (ZWJ) Sequences</h4>
+<p>In addition to the geo-political flags, BabelStone Flags also supports the <a href="http://emojipedia.org/rainbow-flag/" title="Emojipedia : Rainbow Flag">Rainbow flag</a> and <a href="http://emojipedia.org/pirate-flag/" title="Emojipedia : Pirate Flag">Pirate flag</a>. These are not single Unicode characters, but are represented as the following <a href="http://www.unicode.org/reports/tr51/#Emoji_ZWJ_Sequences" title="Unicode Technical Standard #51 : Emoji ZWJ Sequences">Emoji ZWJ Sequences</a> :</p>
+<ul>
+<li>&lt;1F3F3 FE0F 200D 1F308&gt; (Waving White Flag, <span title="Variation Selector-16">VS-16</span>, <span title="Zero Width Joiner">ZWJ</span>, Rainbow) = Rainbow Flag</li>
+<li>&lt;1F3F4 200D 2620 FE0F&gt; (Waving Black Flag, <span title="Zero Width Joiner">ZWJ</span>, Skull and Crossbones, <span title="Variation Selector-16">VS-16</span>) = Pirate Flag (this sequence is not currently defined in the Unicode Standard, but is expected to be defined in Emoji 11.0)</li>
+</ul>
+
+<p>Note that there is some confusion about the placement of the variation selector (VS-16) in these sequences, with it being placed after the first graphic character in the case of the Rainbow Flag, but at the end of the sequence in the case of the Pirate Flag. BabelStone Flags supports both placements for both flags, as well as sequences with the variation selector omitted.</p>
+
+<p>I have tested BabelStone Flags under Windows 10 on the latest versions of Chrome, Edge, Firefox and Internet Explorer, and they all display the Rainbow flag correctly, and all but Chrome display the Pirate flag correctly. Firefox, Edge and Internet Explorer display the Rainbow and Pirate flags with either VS-15 (text display) or VS-16 (emoji display), but Edge and Internet Explorer do not display the Pirate flag unless it has either VS-15 or VS-16 (they display the Rainbow flag with or without VS-15 or VS-16). Only Chrome does not display the Rainbow flag if it has VS-15. The Rainbow and Pirate flags also display correctly on Microsoft Word 2016.</p>
+<br/>
+
+<p class="centre">Display of Colour Flag Glyphs in Microsoft Word 2016</p>
+<p class="centre"><img src="Images/FlagTestWord2016.png" title="Colour flag glyphs display correctly in Microsoft Word 2016" alt="" /></p>
+<br/>
+<hr/>
+
+<a name="Glyphs"></a>
+<h3>Glyphs</h3>
+<a name="Colour"></a>
+<h4>Colour Glyphs</h4>
+<p>The colour glyphs are created using the <a href="http://www.high-logic.com/font-editor/fontcreator.html" title="High-Logic: FontCreator">High-Logic FontCreator</a> font editor. The glyphs are not emoji-style (waving flag), but attempt to accurately reproduce the proportions and colours of the flags as a flat design. All flag glyphs have the same height, but have differing widths depending upon the flag proportions (1:1, 1:2, 2:3, and 3:5 being the most common proportions). Except for the flag of Nepal, all glyphs are square or rectangular in shape, with no flagpole. The glyphs do not have an added border line, so if displayed on a white background any flags with a white background or large sections of white (e.g. flags for Japan, Korea, Russia, and Zug) merge into the surrounding background. It is therefore best to display the flags on a background colour that is not normally used as a flag colour, such as light grey or beige.</p>
+<br/>
+
+<p class="centre">Colour Flag Glyphs at 48 points in Firefox browser</p>
+<p class="centre"><img src="Images/ColourFlagGlyphs.png" title="Colour flag glyphs at 48 points in Firefox browser" alt="" /></p>
+<br/>
+
+<a name="Monochrome"></a>
+<h4>Monochrome Glyphs</h4>
+<p>If a particular software application supports the OpenType features used to substitute single glyphs for Regional Indicator sequences or flag emoji tag sequences, but it does not support the colour glyph format, then it will display fallback monochrome glyphs provided by the BabelStone Flags font. These monochrome glyphs are all in the form of a waving flag (with a flagpole on the left) with the two-letter ISO 3166-1 alpha-2 code on the flag. For flags corresponding to ISO 3166-2 subdivision codes the two- or three-letter code after the hyphen is placed under the flag.</p>
+
+<p>Due to a bug in Chrome which displays the width of the colour glyphs as the width of the fallback monochrome glyph, the monochrome glyphs in BabelStone Flags have two dots on either side of the flag so that the monochrome glyph is exactly the same width as the corresponding colour glyph. The quality of the fallback glyphs is quite poor, and may be improved in the future.</p>
+<br/>
+
+<p class="centre">Monochrome Fallback Glyphs for Country Flags in BabelPad</p>
+<p class="centre"><img src="Images/MonochromeFlagGlyphs.png" title="Monochrome fallback glyphs for country flags" alt="" /></p>
+<br/>
+<hr/>
+
+<a name="Flags"></a>
+<h3>Supported Flags</h3>
+<p>The tables below render each flag character in the BabelStone Flags font, either using the font installed on your local machine or using a <a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format" title="Wikipedia : Web Open Font Format">WOFF font</a> if the font is not installed on your local machine. Supported sequences are also listed at my <a href="FlagsTest.html">Flags Test</a> page.</p>
+<br/>
+
+<a name="Table1"></a>
+<h4>Flags for ISO 3166-1 Country Codes</h4>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm" width="15%">Code</th>
+	<th class="sm" width="20%">Sequence</th>
+	<th class="sm" width="30%">Glyph</th>
+	<th class="sm" width="35%">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th class="sm">AD</th>
+	<td class="sm">&lt;1F1E6 1F1E9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AD">🇦🇩</span></td>
+	<td class="sm">Andorra</td>
+</tr>
+<tr>
+	<th class="sm">AL</th>
+	<td class="sm">&lt;1F1E6 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AL">🇦🇱</span></td>
+	<td class="sm">Albania</td>
+</tr>
+<tr>
+	<th class="sm">AM</th>
+	<td class="sm">&lt;1F1E6 1F1F2&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AM">🇦🇲</span></td>
+	<td class="sm">Armenia</td>
+</tr>
+<tr>
+	<th class="sm">AQ</th>
+	<td class="sm">&lt;1F1E6 1F1F6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AQ">🇦🇶</span></td>
+	<td class="sm">Antarctica</td>
+</tr>
+<tr>
+	<th class="sm">AT</th>
+	<td class="sm">&lt;1F1E6 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AT">🇦🇹</span></td>
+	<td class="sm">Austria</td>
+</tr>
+<tr>
+	<th class="sm">AU</th>
+	<td class="sm">&lt;1F1E6 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AU">🇦🇺</span></td>
+	<td class="sm">Australia</td>
+</tr>
+<tr>
+	<th class="sm">AX</th>
+	<td class="sm">&lt;1F1E6 1F1FD&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AX">🇦🇽</span></td>
+	<td class="sm">Åland Islands</td>
+</tr>
+<tr>
+	<th class="sm">AZ</th>
+	<td class="sm">&lt;1F1E6 1F1FF&gt;</td>
+	<td class="sm light-grey flags huge"><span title="AZ">🇦🇿</span></td>
+	<td class="sm">Azerbaijan</td>
+</tr>
+<tr>
+	<th class="sm">BA</th>
+	<td class="sm">&lt;1F1E7 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BA">🇧🇦</span></td>
+	<td class="sm">Bosnia and Herzegovina</td>
+</tr>
+<tr>
+	<th class="sm">BE</th>
+	<td class="sm">&lt;1F1E7 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BE">🇧🇪</span></td>
+	<td class="sm">Belgium</td>
+</tr>
+<tr>
+	<th class="sm">BG</th>
+	<td class="sm">&lt;1F1E7 1F1EC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BG">🇧🇬</span></td>
+	<td class="sm">Bulgaria</td>
+</tr>
+<tr>
+	<th class="sm">BR</th>
+	<td class="sm">&lt;1F1E7 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BR">🇧🇷</span></td>
+	<td class="sm">Brazil</td>
+</tr>
+<tr>
+	<th class="sm">BT</th>
+	<td class="sm">&lt;1F1E7 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BT">🇧🇹</span></td>
+	<td class="sm">Bhutan</td>
+</tr>
+<tr>
+	<th class="sm">BV</th>
+	<td class="sm">&lt;1F1E7 1F1FB&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BV">🇧🇻</span></td>
+	<td class="sm">Bouvet Island<br/>[Uses the flag of Norway]</td>
+</tr>
+<tr>
+	<th class="sm">BY</th>
+	<td class="sm">&lt;1F1E7 1F1FE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="BY">🇧🇾</span></td>
+	<td class="sm">Belarus</td>
+</tr>
+<tr>
+	<th class="sm">CA</th>
+	<td class="sm">&lt;1F1E8 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CA">🇨🇦</span></td>
+	<td class="sm">Canada</td>
+</tr>
+<tr>
+	<th class="sm">CH</th>
+	<td class="sm">&lt;1F1E8 1F1ED&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CH">🇨🇭</span></td>
+	<td class="sm">Switzerland</td>
+</tr>
+<tr>
+	<th class="sm">CI</th>
+	<td class="sm">&lt;1F1E8 1F1EE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CI">🇨🇮</span></td>
+	<td class="sm">Côte d'Ivoire</td>
+</tr>
+<tr>
+	<th class="sm">CL</th>
+	<td class="sm">&lt;1F1E8 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CL">🇨🇱</span></td>
+	<td class="sm">Chile</td>
+</tr>
+<tr>
+	<th class="sm">CN</th>
+	<td class="sm">&lt;1F1E8 1F1F3&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CN">🇨🇳</span></td>
+	<td class="sm">China</td>
+</tr>
+<tr>
+	<th class="sm">CO</th>
+	<td class="sm">&lt;1F1E8 1F1F4&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CO">🇨🇴</span></td>
+	<td class="sm">Colombia</td>
+</tr>
+<tr>
+	<th class="sm">CU</th>
+	<td class="sm">&lt;1F1E8 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CU">🇨🇺</span></td>
+	<td class="sm">Cuba</td>
+</tr>
+<tr>
+	<th class="sm">CY</th>
+	<td class="sm">&lt;1F1E8 1F1FE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CY">🇨🇾</span></td>
+	<td class="sm">Cyprus</td>
+</tr>
+<tr>
+	<th class="sm">CZ</th>
+	<td class="sm">&lt;1F1E8 1F1FF&gt;</td>
+	<td class="sm light-grey flags huge"><span title="CZ">🇨🇿</span></td>
+	<td class="sm">Czechia</td>
+</tr>
+<tr>
+	<th class="sm">DE</th>
+	<td class="sm">&lt;1F1E9 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="DE">🇩🇪</span></td>
+	<td class="sm">Germany</td>
+</tr>
+<tr>
+	<th class="sm">DK</th>
+	<td class="sm">&lt;1F1E9 1F1F0&gt;</td>
+	<td class="sm light-grey flags huge"><span title="DK">🇩🇰</span></td>
+	<td class="sm">Denmark</td>
+</tr>
+<tr>
+	<th class="sm">EE</th>
+	<td class="sm">&lt;1F1EA 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="EE">🇪🇪</span></td>
+	<td class="sm">Estonia</td>
+</tr>
+<tr>
+	<th class="sm">ES</th>
+	<td class="sm">&lt;1F1EA 1F1F8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ES">🇪🇸</span></td>
+	<td class="sm">Spain</td>
+</tr>
+<tr>
+	<th class="sm">EU</th>
+	<td class="sm">&lt;1F1EA 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="EU">🇪🇺</span></td>
+	<td class="sm">European Union</td>
+</tr>
+<tr>
+	<th class="sm">FI</th>
+	<td class="sm">&lt;1F1EB 1F1EE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="FI">🇫🇮</span></td>
+	<td class="sm">Finland</td>
+</tr>
+<tr>
+	<th class="sm">FO</th>
+	<td class="sm">&lt;1F1EB 1F1F4&gt;</td>
+	<td class="sm light-grey flags huge"><span title="FO">🇫🇴</span></td>
+	<td class="sm">Faroe Islands</td>
+</tr>
+<tr>
+	<th class="sm">FR</th>
+	<td class="sm">&lt;1F1EB 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="FR">🇫🇷</span></td>
+	<td class="sm">France</td>
+</tr>
+<tr>
+	<th class="sm">GB</th>
+	<td class="sm">&lt;1F1EC 1F1E7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="GB">🇬🇧</span></td>
+	<td class="sm">United Kingdom</td>
+</tr>
+<tr>
+	<th class="sm">GE</th>
+	<td class="sm">&lt;1F1EC 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="EE">🇬🇪</span></td>
+	<td class="sm">Georgia</td>
+</tr>
+<tr>
+	<th class="sm">GG</th>
+	<td class="sm">&lt;1F1EC 1F1EC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="GG">🇬🇬</span></td>
+	<td class="sm">Guernsey</td>
+</tr>
+<tr>
+	<th class="sm">GI</th>
+	<td class="sm">&lt;1F1EC 1F1EE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="GI">🇬🇮</span></td>
+	<td class="sm">Gibraltar</td>
+</tr>
+<tr>
+	<th class="sm">GL</th>
+	<td class="sm">&lt;1F1EC 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="GL">🇬🇱</span></td>
+	<td class="sm">Greenland</td>
+</tr>
+<tr>
+	<th class="sm">GR</th>
+	<td class="sm">&lt;1F1EC 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="GR">🇬🇷</span></td>
+	<td class="sm">Greece</td>
+</tr>
+<tr>
+	<th class="sm">HK</th>
+	<td class="sm">&lt;1F1ED 1F1F0&gt;</td>
+	<td class="sm light-grey flags huge"><span title="HK">🇭🇰</span></td>
+	<td class="sm">Hong Kong</td>
+</tr>
+<tr>
+	<th class="sm">HR</th>
+	<td class="sm">&lt;1F1ED 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="HR">🇭🇷</span></td>
+	<td class="sm">Croatia</td>
+</tr>
+<tr>
+	<th class="sm">HU</th>
+	<td class="sm">&lt;1F1ED 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="HU">🇭🇺</span></td>
+	<td class="sm">Hungary</td>
+</tr>
+<tr>
+	<th class="sm">ID</th>
+	<td class="sm">&lt;1F1EE 1F1E9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ID">🇮🇩</span></td>
+	<td class="sm">Indonesia</td>
+</tr>
+<tr>
+	<th class="sm">IE</th>
+	<td class="sm">&lt;1F1EE 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IE">🇮🇪</span></td>
+	<td class="sm">Ireland</td>
+</tr>
+<tr>
+	<th class="sm">IL</th>
+	<td class="sm">&lt;1F1EE 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IL">🇮🇱</span></td>
+	<td class="sm">Israel</td>
+</tr>
+<tr>
+	<th class="sm">IM</th>
+	<td class="sm">&lt;1F1EE 1F1F2&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IM">🇮🇲</span></td>
+	<td class="sm">Isle of Man</td>
+</tr>
+<tr>
+	<th class="sm">IN</th>
+	<td class="sm">&lt;1F1EE 1F1F3&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IN">🇮🇳</span></td>
+	<td class="sm">India</td>
+</tr>
+<tr>
+	<th class="sm">IQ</th>
+	<td class="sm">&lt;1F1EE 1F1F6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IQ">🇮🇶</span></td>
+	<td class="sm">Iran</td>
+</tr>
+<tr>
+	<th class="sm">IR</th>
+	<td class="sm">&lt;1F1EE 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IR">🇮🇷</span></td>
+	<td class="sm">Iran</td>
+</tr>
+<tr>
+	<th class="sm">IS</th>
+	<td class="sm">&lt;1F1EE 1F1F8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IS">🇮🇸</span></td>
+	<td class="sm">Iceland</td>
+</tr>
+<tr>
+	<th class="sm">IT</th>
+	<td class="sm">&lt;1F1EE 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="IT">🇮🇹</span></td>
+	<td class="sm">Italy</td>
+</tr>
+<tr>
+	<th class="sm">JE</th>
+	<td class="sm">&lt;1F1EF 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="JE">🇯🇪</span></td>
+	<td class="sm">Jersey</td>
+</tr>
+<tr>
+	<th class="sm">JP</th>
+	<td class="sm">&lt;1F1EF 1F1F5&gt;</td>
+	<td class="sm light-grey flags huge"><span title="JP">🇯🇵</span></td>
+	<td class="sm">Japan</td>
+</tr>
+<tr>
+	<th class="sm">KH</th>
+	<td class="sm">&lt;1F1F0 1F1ED&gt;</td>
+	<td class="sm light-grey flags huge"><span title="KH">🇰🇭</span></td>
+	<td class="sm">Cambodia</td>
+</tr>
+<tr>
+	<th class="sm">KP</th>
+	<td class="sm">&lt;1F1F0 1F1F5&gt;</td>
+	<td class="sm light-grey flags huge"><span title="KP">🇰🇵</span></td>
+	<td class="sm">North Korea</td>
+</tr>
+<tr>
+	<th class="sm">KR</th>
+	<td class="sm">&lt;1F1F0 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="KR">🇰🇷</span></td>
+	<td class="sm">South Korea</td>
+</tr>
+<tr>
+	<th class="sm">LA</th>
+	<td class="sm">&lt;1F1F1 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="LA">🇱🇦</span></td>
+	<td class="sm">Lao People's Democratic Republic</td>
+</tr>
+<tr>
+	<th class="sm">LI</th>
+	<td class="sm">&lt;1F1F1 1F1EE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="LI">🇱🇮</span></td>
+	<td class="sm">Liechtenstein</td>
+</tr>
+<tr>
+	<th class="sm">LT</th>
+	<td class="sm">&lt;1F1F1 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="LT">🇱🇹</span></td>
+	<td class="sm">Lithuania</td>
+</tr>
+<tr>
+	<th class="sm">LU</th>
+	<td class="sm">&lt;1F1F1 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="LU">🇱🇺</span></td>
+	<td class="sm">Luxembourg</td>
+</tr>
+<tr>
+	<th class="sm">LV</th>
+	<td class="sm">&lt;1F1F1 1F1FB&gt;</td>
+	<td class="sm light-grey flags huge"><span title="LV">🇱🇻</span></td>
+	<td class="sm">Latvia</td>
+</tr>
+<tr>
+	<th class="sm">MC</th>
+	<td class="sm">&lt;1F1F2 1F1E8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MC">🇲🇨</span></td>
+	<td class="sm">Monaco</td>
+</tr>
+<tr>
+	<th class="sm">MD</th>
+	<td class="sm">&lt;1F1F2 1F1E9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MD">🇲🇩</span></td>
+	<td class="sm">Moldova, Republic of</td>
+</tr>
+<tr>
+	<th class="sm">ME</th>
+	<td class="sm">&lt;1F1F2 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ME">🇲🇪</span></td>
+	<td class="sm">Montenegro</td>
+</tr>
+<tr>
+	<th class="sm">MK</th>
+	<td class="sm">&lt;1F1F2 1F1F0&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MK">🇲🇰</span></td>
+	<td class="sm">Macedonia, the former Yugoslav Republic of</td>
+</tr>
+<tr>
+	<th class="sm">ML</th>
+	<td class="sm">&lt;1F1F2 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ML">🇲🇱</span></td>
+	<td class="sm">Mali</td>
+</tr>
+<tr>
+	<th class="sm">MM</th>
+	<td class="sm">&lt;1F1F2 1F1F2&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MM">🇲🇲</span></td>
+	<td class="sm">Myanmar</td>
+</tr>
+<tr>
+	<th class="sm">MN</th>
+	<td class="sm">&lt;1F1F2 1F1F3&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MN">🇲🇳</span></td>
+	<td class="sm">Mongolia</td>
+</tr>
+<tr>
+	<th class="sm">MO</th>
+	<td class="sm">&lt;1F1F2 1F1F4&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MO">🇲🇴</span></td>
+	<td class="sm">Macau</td>
+</tr>
+<tr>
+	<th class="sm">MR</th>
+	<td class="sm">&lt;1F1F2 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="M2">🇲🇷</span></td>
+	<td class="sm">Mauritania (2017–)</td>
+</tr>
+<tr>
+	<th class="sm">MR + VS1</th>
+	<td class="sm">&lt;1F1F2 1F1F7 FE00&gt;</td>
+	<td class="sm light-grey flags huge"><span title="M2">🇲🇷︀</span></td>
+	<td class="sm">Mauritania (1959–2017)</td>
+</tr>
+<tr>
+	<th class="sm">MT</th>
+	<td class="sm">&lt;1F1F2 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MT">🇲🇹</span></td>
+	<td class="sm">Malta</td>
+</tr>
+<tr>
+	<th class="sm">MY</th>
+	<td class="sm">&lt;1F1F2 1F1FE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="MY">🇲🇾</span></td>
+	<td class="sm">Malaysia</td>
+</tr>
+<tr>
+	<th class="sm">NG</th>
+	<td class="sm">&lt;1F1F3 1F1EC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="NG">🇳🇬</span></td>
+	<td class="sm">Nigeria</td>
+</tr>
+<tr>
+	<th class="sm">NL</th>
+	<td class="sm">&lt;1F1F3 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="NL">🇳🇱</span></td>
+	<td class="sm">Netherlands</td>
+</tr>
+<tr>
+	<th class="sm">NO</th>
+	<td class="sm">&lt;1F1F3 1F1F4&gt;</td>
+	<td class="sm light-grey flags huge"><span title="NO">🇳🇴</span></td>
+	<td class="sm">Norway</td>
+</tr>
+<tr>
+	<th class="sm">NP</th>
+	<td class="sm">&lt;1F1F3 1F1F5&gt;</td>
+	<td class="sm light-grey flags huge"><span title="NP">🇳🇵</span></td>
+	<td class="sm">Nepal</td>
+</tr>
+<tr>
+	<th class="sm">NZ</th>
+	<td class="sm">&lt;1F1F3 1F1FF&gt;</td>
+	<td class="sm light-grey flags huge"><span title="NZ">🇳🇿</span></td>
+	<td class="sm">New Zealand</td>
+</tr>
+<tr>
+	<th class="sm">PG</th>
+	<td class="sm">&lt;1F1F5 1F1EC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="PG">🇵🇬</span></td>
+	<td class="sm">Papua New Guinea</td>
+</tr>
+<tr>
+	<th class="sm">PH</th>
+	<td class="sm">&lt;1F1F5 1F1ED&gt;</td>
+	<td class="sm light-grey flags huge"><span title="PH">🇵🇭</span></td>
+	<td class="sm">Philippines</td>
+</tr>
+<tr>
+	<th class="sm">PL</th>
+	<td class="sm">&lt;1F1F5 1F1F1&gt;</td>
+	<td class="sm light-grey flags huge"><span title="PL">🇵🇱</span></td>
+	<td class="sm">Poland</td>
+</tr>
+<tr>
+	<th class="sm">PS</th>
+	<td class="sm">&lt;1F1F5 1F1F8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="PS">🇵🇸</span></td>
+	<td class="sm">Palestine, State of</td>
+</tr>
+<tr>
+	<th class="sm">PT</th>
+	<td class="sm">&lt;1F1F5 1F1F9&gt;</td>
+	<td class="sm light-grey flags huge"><span title="PT">🇵🇹</span></td>
+	<td class="sm">Portugal</td>
+</tr>
+<tr>
+	<th class="sm">RO</th>
+	<td class="sm">&lt;1F1F7 1F1F4&gt;</td>
+	<td class="sm light-grey flags huge"><span title="RO">🇷🇴</span></td>
+	<td class="sm">Romania</td>
+</tr>
+<tr>
+	<th class="sm">RS</th>
+	<td class="sm">&lt;1F1F7 1F1F8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="RS">🇷🇸</span></td>
+	<td class="sm">Serbia</td>
+</tr>
+<tr>
+	<th class="sm">RU</th>
+	<td class="sm">&lt;1F1F7 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="RU">🇷🇺</span></td>
+	<td class="sm">Russia</td>
+</tr>
+<tr>
+	<th class="sm">SA</th>
+	<td class="sm">&lt;1F1F8 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SE">🇸🇦</span></td>
+	<td class="sm"> Saudi Arabia</td>
+</tr>
+<tr>
+	<th class="sm">SE</th>
+	<td class="sm">&lt;1F1F8 1F1EA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SE">🇸🇪</span></td>
+	<td class="sm">Sweden</td>
+</tr>
+<tr>
+	<th class="sm">SG</th>
+	<td class="sm">&lt;1F1F8 1F1EC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SG">🇸🇬</span></td>
+	<td class="sm">Singapore</td>
+</tr>
+<tr>
+	<th class="sm">SI</th>
+	<td class="sm">&lt;1F1F8 1F1EE&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SI">🇸🇮</span></td>
+	<td class="sm">Slovenia</td>
+</tr>
+<tr>
+	<th class="sm">SJ</th>
+	<td class="sm">&lt;1F1F8 1F1EF&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SJ">🇸🇯</span></td>
+	<td class="sm">Svalbard and Jan Mayen<br/>[Uses the flag of Norway]</td>
+</tr>
+<tr>
+	<th class="sm">SK</th>
+	<td class="sm">&lt;1F1F8 1F1F0&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SK">🇸🇰</span></td>
+	<td class="sm">Slovakia</td>
+</tr>
+<tr>
+	<th class="sm">SM</th>
+	<td class="sm">&lt;1F1F8 1F1F2&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SM">🇸🇲</span></td>
+	<td class="sm">San Marino</td>
+</tr>
+<tr>
+	<th class="sm">SR</th>
+	<td class="sm">&lt;1F1F8 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SR">🇸🇷</span></td>
+	<td class="sm">Suriname</td>
+</tr>
+<tr>
+	<th class="sm">SU</th>
+	<td class="sm">&lt;1F1F8 1F1FA&gt;</td>
+	<td class="sm light-grey flags huge"><span title="SU">🇸🇺</span></td>
+	<td class="sm">Soviet Union</td>
+</tr>
+<tr>
+	<th class="sm">TH</th>
+	<td class="sm">&lt;1F1F9 1F1ED&gt;</td>
+	<td class="sm light-grey flags huge"><span title="TH">🇹🇭</span></td>
+	<td class="sm">Thailand</td>
+</tr>
+<tr>
+	<th class="sm">TR</th>
+	<td class="sm">&lt;1F1F9 1F1F7&gt;</td>
+	<td class="sm light-grey flags huge"><span title="TR">🇹🇷</span></td>
+	<td class="sm">Turkey</td>
+</tr>
+<tr>
+	<th class="sm">TW</th>
+	<td class="sm">&lt;1F1F9 1F1FC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="TW">🇹🇼</span></td>
+	<td class="sm">Taiwan</td>
+</tr>
+<tr>
+	<th class="sm">UA</th>
+	<td class="sm">&lt;1F1FA 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="UA">🇺🇦</span></td>
+	<td class="sm">Ukraine</td>
+</tr>
+<tr>
+	<th class="sm">UM</th>
+	<td class="sm">&lt;1F1FA 1F1F2&gt;</td>
+	<td class="sm light-grey flags huge"><span title="UM">🇺🇲</span></td>
+	<td class="sm">United States Minor Outlying Islands<br/>[Uses the flag of the United States of America]</td>
+</tr>
+<tr>
+	<th class="sm">UN</th>
+	<td class="sm">&lt;1F1FA 1F1F3&gt;</td>
+	<td class="sm light-grey flags huge"><span title="UN">🇺🇳</span></td>
+	<td class="sm">United Nations</td>
+</tr>
+<tr>
+	<th class="sm">US</th>
+	<td class="sm">&lt;1F1FA 1F1F8&gt;</td>
+	<td class="sm light-grey flags huge"><span title="US">🇺🇸</span></td>
+	<td class="sm">United States of America</td>
+</tr>
+<tr>
+	<th class="sm">VA</th>
+	<td class="sm">&lt;1F1FB 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="VA">🇻🇦</span></td>
+	<td class="sm">Holy See (Vatican City State)</td>
+</tr>
+<tr>
+	<th class="sm">VN</th>
+	<td class="sm">&lt;1F1FB 1F1F3&gt;</td>
+	<td class="sm light-grey flags huge"><span title="VN">🇻🇳</span></td>
+	<td class="sm">Viet Nam</td>
+</tr>
+<tr>
+	<th class="sm">XK</th>
+	<td class="sm">&lt;1F1FD 1F1F0&gt;</td>
+	<td class="sm light-grey flags huge"><span title="XK">🇽🇰</span></td>
+	<td class="sm">Kosovo</td>
+</tr>
+<tr>
+	<th class="sm">ZA</th>
+	<td class="sm">&lt;1F1FF 1F1E6&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ZA">🇿🇦</span></td>
+	<td class="sm">South Africa</td>
+</tr>
+<tr>
+	<th class="sm">ZW</th>
+	<td class="sm">&lt;1F1FF 1F1FC&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ZW">🇿🇼</span></td>
+	<td class="sm">Zimbabwe</td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<a name="Table2"></a>
+<h4>Flags for ISO 3166-2 Country Subdivision Codes</h4>
+<p>Codes marked with three stars (***) are unofficial codes that I have devised for places that do not have an ISO 3166-2 code.</p>
+<br/>
+
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm" width="35%">Sequence</th>
+	<th class="sm" width="25%">Glyph</th>
+	<th class="sm" width="40%">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">&lt;1F3F4 E0062 E0065 E0062 E0072 E0075 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="fr-bre">🏴󠁢󠁥󠁢󠁲󠁵󠁿</span></td>
+	<td class="sm">Belgium: Brussels-Capital Region (FR-BRU)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0062 E0065 E0076 E006C E0067 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="fr-vlg">🏴󠁢󠁥󠁶󠁬󠁧󠁿</span></td>
+	<td class="sm">Belgium: Flemish Region (FR-VLG)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0062 E0065 E0077 E0061 E006C E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="fr-wal">🏴󠁢󠁥󠁷󠁡󠁬󠁿</span></td>
+	<td class="sm">Belgium: Walloon Region (FR-WAL)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0061 E006E E006C E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ca-nl">🏴󠁣󠁡󠁮󠁬󠁿</span></td>
+	<td class="sm">Canada: Newfoundland and Labrador (CA-NL)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0061 E006E E0075 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ca-nu">🏴󠁣󠁡󠁮󠁵󠁿</span></td>
+	<td class="sm">Canada: Nunavut (CA-NU)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0061 E0071 E0063 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ca-qc">🏴󠁣󠁡󠁱󠁣󠁿</span></td>
+	<td class="sm">Canada: Quebec (CA-QC)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E0066 E0072 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-fr">🏴󠁣󠁨󠁦󠁲󠁿</span></td>
+	<td class="sm">Switzerland: Fribourg (CH-FR)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E006C E0075 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-lu">🏴󠁣󠁨󠁬󠁵󠁿</span></td>
+	<td class="sm">Switzerland: Luzern (CH-LU)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E006E E0065 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-ne">🏴󠁣󠁨󠁮󠁥󠁿</span></td>
+	<td class="sm">Switzerland: Neuchâtel (CH-NE)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E0073 E006F E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-so">🏴󠁣󠁨󠁳󠁯󠁿</span></td>
+	<td class="sm">Switzerland: Solothurn (CH-SO)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E0073 E007A E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-sz">🏴󠁣󠁨󠁳󠁺󠁿</span></td>
+	<td class="sm">Switzerland: Schwyz (CH-SZ)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E0074 E0069 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-ti">🏴󠁣󠁨󠁴󠁩󠁿</span></td>
+	<td class="sm">Switzerland: Ticino (CH-TI)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E0076 E0073 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-vs">🏴󠁣󠁨󠁶󠁳󠁿</span></td>
+	<td class="sm">Switzerland: Valais (CH-VS)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E007A E0067 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-zg">🏴󠁣󠁨󠁺󠁧󠁿</span></td>
+	<td class="sm">Switzerland: Zug (CH-ZG)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0063 E0068 E007A E0068 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ch-zh">🏴󠁣󠁨󠁺󠁨󠁿</span></td>
+	<td class="sm">Switzerland: Zürich (CH-ZH)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0064 E0065 E0062 E0079 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="de-by">🏴󠁤󠁥󠁢󠁹󠁿</span></td>
+	<td class="sm">Germany: Bavaria (DE-BY) [default]</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 FE00 E0064 E0065 E0062 E0079 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="de-by">🏴︀󠁤󠁥󠁢󠁹󠁿</span></td>
+	<td class="sm">Germany: Bavaria (DE-BY) [striped version using VS1]</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 FE01 E0064 E0065 E0062 E0079 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="de-by">🏴︁󠁤󠁥󠁢󠁹󠁿</span></td>
+	<td class="sm">Germany: Bavaria (DE-BY) [version with lozenges using VS2]</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0065 E0073 E0063 E0074 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="es-ct">🏴󠁥󠁳󠁣󠁴󠁿</span></td>
+	<td class="sm">Spain: Catalonia (ES-CT)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0065 E0073 E0070 E0076 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="es-pv">🏴󠁥󠁳󠁰󠁶󠁿</span></td>
+	<td class="sm">Spain: Basque Country (ES-PV)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0066 E0072 E0062 E0072 E0065 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="fr-bre">🏴󠁦󠁲󠁢󠁲󠁥󠁿</span></td>
+	<td class="sm">France: Bretagne (FR-BRE)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0061 E0067 E0079 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-agy">🏴󠁧󠁢󠁡󠁧󠁹󠁿</span></td>
+	<td class="sm">United Kingdom: Isle of Anglesey (GB-AGY/GB-YNM)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0063 E006F E006E E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-con">🏴󠁧󠁢󠁣󠁯󠁮󠁿</span></td>
+	<td class="sm">United Kingdom: Cornwall (GB-CON)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0064 E0065 E0076 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-dev">🏴󠁧󠁢󠁤󠁥󠁶󠁿</span></td>
+	<td class="sm">United Kingdom: Devon (GB-DEV)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0064 E006F E0072 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-dor">🏴󠁧󠁢󠁤󠁯󠁲󠁿</span></td>
+	<td class="sm">United Kingdom: Dorset (GB-DOR)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0065 E006E E0067 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-eng">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></td>
+	<td class="sm">United Kingdom: England (GB-ENG)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0066 E006C E006E E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-fln">🏴󠁧󠁢󠁦󠁬󠁮󠁿</span></td>
+	<td class="sm">United Kingdom: Flintshire (GB-FLN/GB-FFL)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E006D E006F E006E E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-mon">🏴󠁧󠁢󠁭󠁯󠁮󠁿</span></td>
+	<td class="sm">United Kingdom: Monmouthshire (GB-MON/GB-FYN)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E006E E0062 E006C E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-nbl">🏴󠁧󠁢󠁮󠁢󠁬󠁿</span></td>
+	<td class="sm">United Kingdom: Northumberland (GB-NBL)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E006E E0069 E0072 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-nir">🏴󠁧󠁢󠁮󠁩󠁲󠁿</span></td>
+	<td class="sm">United Kingdom: Northern Ireland (GB-NIR)<br/>[Not an official flag, but used for international sporting competitions]</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E006F E0072 E006B E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-ork">🏴󠁧󠁢󠁯󠁲󠁫󠁿</span></td>
+	<td class="sm">United Kingdom: Orkney Islands (GB-ORK)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0070 E0065 E006D E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-pem">🏴󠁧󠁢󠁰󠁥󠁭󠁿</span></td>
+	<td class="sm">United Kingdom: Pembrokeshire (GB-PEM/GB-BNF)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0073 E0063 E0074 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-sct">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></td>
+	<td class="sm">United Kingdom: Scotland (GB-SCT)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0073 E0072 E0079 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-sry">🏴󠁧󠁢󠁳󠁲󠁹󠁿</span></td>
+	<td class="sm">United Kingdom: Surrey (GB-SRY)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0076 E0067 E006C E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-wls">🏴󠁧󠁢󠁶󠁧󠁬󠁿</span></td>
+	<td class="sm">United Kingdom: The Vale of Glamorgan (GB-VGL/GB-BMG)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0077 E006C E0073 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-wls">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></td>
+	<td class="sm">United Kingdom: Wales (GB-WLS/GB-CYM)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0078 E0063 E0061 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-xca">🏴󠁧󠁢󠁸󠁣󠁡󠁿</span></td>
+	<td class="sm">United Kingdom: Caithness (GB-XCA***)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0078 E0063 E0072 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-xcr">🏴󠁧󠁢󠁸󠁣󠁲󠁿</span></td>
+	<td class="sm">United Kingdom: Caernarfonshire (GB-XCR***)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0078 E006B E0064 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-xkd">🏴󠁧󠁢󠁸󠁫󠁤󠁿</span></td>
+	<td class="sm">United Kingdom: Kirkcudbrightshire (GB-XKD***)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E0078 E006D E0065 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-xme">🏴󠁧󠁢󠁸󠁭󠁥󠁿</span></td>
+	<td class="sm">United Kingdom: Merionethshire (GB-XME***)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0067 E0062 E007A E0065 E0074 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="gb-zet">🏴󠁧󠁢󠁺󠁥󠁴󠁿</span></td>
+	<td class="sm">United Kingdom: Shetland Islands (GB-ZET)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0075 E0073 E0061 E006B E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="us-ak">🏴󠁵󠁳󠁡󠁫󠁿</span></td>
+	<td class="sm">United States: Alaska (US-AK)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0069 E0065 E0063 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ie-c">🏴󠁩󠁥󠁣󠁿</span></td>
+	<td class="sm">Ireland: Connacht (IE-C)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0069 E0065 E006C E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ie-l">🏴󠁩󠁥󠁬󠁿</span></td>
+	<td class="sm">Ireland: Leinster / Laighin (IE-L)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0069 E0065 E006D E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ie-m">🏴󠁩󠁥󠁭󠁿</span></td>
+	<td class="sm">Ireland: Munster / An Mhumhain (IE-M)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0069 E0065 E0075 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="ie-u">🏴󠁩󠁥󠁵󠁿</span></td>
+	<td class="sm">Ireland: Ulster / Ulaidh (IE-U)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F36E E006C E0065 E0066 E0072 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="nl-fr">🏴󠁮󠁬󠁦󠁲󠁿</span></td>
+	<td class="sm">Netherlands: Friesland (NL-FR)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0075 E0073 E0063 E0061 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="us-ca">🏴󠁵󠁳󠁣󠁡󠁿</span></td>
+	<td class="sm">United States: California (US-CA)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0075 E0073 E0068 E0069 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="us-hi">🏴󠁵󠁳󠁨󠁩󠁿</span></td>
+	<td class="sm">United States: Hawaii (US-HI)</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 E0075 E0073 E0074 E0078 E007F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="us-tx">🏴󠁵󠁳󠁴󠁸󠁿</span></td>
+	<td class="sm">United States: Texas (US-TX)</td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<a name="Table3"></a>
+<h4>Zero Width Joiner (ZWJ) Flag Sequences</h4>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm" width="35%">Sequence</th>
+	<th class="sm" width="25%">Glyph</th>
+	<th class="sm" width="40%">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sm">&lt;1F3F3 FE0F 200D 1F308&gt;</td>
+	<td class="sm light-grey flags huge"><span title="Rainbow Flag">🏳️‍🌈</span></td>
+	<td class="sm">Rainbow Flag</td>
+</tr>
+<tr>
+	<td class="sm">&lt;1F3F4 200D 2620 FE0F&gt;</td>
+	<td class="sm light-grey flags huge"><span title="Pirate Flag">🏴‍☠️</span></td>
+	<td class="sm">Pirate Flag</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Features"></a>
+<h3>OpenType Features</h3>
+<br/>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm">Script</th>
+	<th class="sm">Language</th>
+	<th class="sm">Features</th>
+	<th class="sm">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">Latin &lt;latn&gt;</td>
+	<td class="sl">Default &lt;dflt&gt;</td>
+	<td class="sl">Glyph Composition Decomposition &lt;ccmp&gt;</td>
+	<td class="sl">Substitution colour glyphs for flag sequences</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Versions"></a>
+<h3>Version History</h3>
+<table class="solid" width="100%">
+<thead>
+<tr>
+	<th class="sm" width="20%">Font</th>
+	<th class="sm" width="10%">Version</th>
+	<th class="sm" width="15%">Date</th>
+	<th class="sm" width="55%">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">1.00</td>
+	<td class="sl">2014-04-03</td>
+	<td class="sl">Experimental test font (several test versions during 2014–2016).</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.00</td>
+	<td class="sl">2017-04-01</td>
+	<td class="sl">First formal release, supporting 28 Regional Indicator sequences, 27 Flag Emoji tag sequences, rainbow flag, and pirate flag.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.01</td>
+	<td class="sl">2017-04-05</td>
+	<td class="sl">Added 7 Regional Indicator sequences and 15 Flag Emoji tag sequences.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.02</td>
+	<td class="sl">2017-05-03</td>
+	<td class="sl">Added 36 Regional Indicator sequences.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.03</td>
+	<td class="sl">2017-11-11</td>
+	<td class="sl">Added 10 Regional Indicator sequences.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.04</td>
+	<td class="sl">2017-12-07</td>
+	<td class="sl">Added 1 Regional Indicator sequence and 1 Flag Emoji tag sequence.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.05</td>
+	<td class="sl">2018-02-10</td>
+	<td class="sl">Added 1 Regional Indicator sequence.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.06</td>
+	<td class="sl">2018-07-19</td>
+	<td class="sl">Added 2 Regional Indicator sequences.</td>
+</tr>
+<tr>
+	<td class="sl">BabelStone Flags</td>
+	<td class="sl">2.07</td>
+	<td class="sl">2018-09-27</td>
+	<td class="sl">Added 8 Regional Indicator sequences and 3 Flag Emoji tag sequences.</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<hr/>
+
+<a name="Download"></a>
+<h3>Download</h3>
+<p>BabelStone Flags is licensed under the <a href="http://scripts.sil.org/OFL" title="SIL Open Font License (OFL)">SIL Open Font License</a> 1.1, which means you are free to use it for personal or commercial purposes, and to redistribute it by itself or as part of a free or commercial software package, just as long as you do not sell the font on its own.  The license also allows you to modify the font in any way you like, as long as the modified font does not use "BabelStone" in its name.  Please read the <a href="BabelStoneOFL.txt" title="OFL License">license</a> for details.</p>
+
+<ul>
+<li><a href="Download/BabelStoneFlags.ttf" title="Click here to download">Download BabelStone Flags</a> [<a href="WOFF/BabelStoneFlags.woff">WOFF</a> <a href="WOFF/BabelStoneFlags.html">WOFF2</a>] v. 2.07 (2018-09-27)</li>
+</ul>
+
+<p>You may download the WOFF or WOFF2 version of the font, and host it on your server if you wish, but you cannot use the WOFF file at babelstone.co.uk on other websites.</p>
+<br/>
+<hr class="toe" />
+<p class="centre"><a href="index.html">BabelStone Maritime</a> (ASCII-mapped Maritime Signal Flags)</p>
+<p class="centre"><a href="index.html">BabelStone Fonts</a></p>
+</body>
+
+<!-- Mirrored from www.babelstone.co.uk/Fonts/Flags.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 11:59:20 GMT -->
+</html>
